@@ -99,7 +99,7 @@ const Index = () => {
           className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
         >
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
-            <ArrowDown size={18} className="text-foreground/30" />
+            <ArrowDown size={18} className="text-white/40" />
           </motion.div>
         </motion.div>
       </section>
