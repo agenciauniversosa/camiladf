@@ -88,7 +88,7 @@ const Navbar = () => {
                     to={l.to}
                     className={`font-body text-[13px] px-4 py-1.5 rounded-full transition-all duration-300 ${
                       scrolled
-                        ? "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        ? "text-gray-500 hover:text-gray-900 hover:bg-gray-100/60"
                         : "text-white/70 hover:text-white hover:bg-white/10"
                     }`}
                   >
