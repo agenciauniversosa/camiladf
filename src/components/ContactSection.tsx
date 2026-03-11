@@ -57,6 +57,17 @@ const ContactSection = () => {
       return;
     }
 
+    // Send email notification
+    supabase.functions.invoke("send-contact-email", {
+      body: {
+        name: result.data.name,
+        email: result.data.email,
+        phone: result.data.phone || null,
+        subject: result.data.subject,
+        message: result.data.message,
+      },
+    }).catch((err) => console.error("Email notification error:", err));
+
     setStatus("sent");
     setForm(initialForm);
     toast({ title: "Mensagem enviada!", description: "Retornaremos em breve." });
