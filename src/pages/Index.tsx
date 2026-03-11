@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, ArrowDown, Users, Briefcase, Building2, Shield, Receipt, Home } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
 import { blogPosts } from "@/lib/blogData";
 import BlogCard from "@/components/BlogCard";
@@ -10,27 +10,31 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import ContactSection from "@/components/ContactSection";
 import TeamSection from "@/components/TeamSection";
-
-const areas = [
-{ title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada.", icon: Users },
-{ title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas.", icon: Briefcase },
-{ title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa.", icon: Building2 },
-{ title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais.", icon: Shield },
-{ title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário.", icon: Receipt },
-{ title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária.", icon: Home }];
-
-
-const stats = [
-{ value: "20+", label: "anos de atuação" },
-{ value: "500+", label: "clientes atendidos" },
-{ value: "98%", label: "de satisfação" }];
-
+import AreasSection from "@/components/AreasSection";
+import StatsBar from "@/components/StatsBar";
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+  const heroTextVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+    },
+  };
+
+  const heroChildVariants = {
+    hidden: { opacity: 0, y: 25, filter: "blur(8px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
@@ -51,54 +55,39 @@ const Index = () => {
         </motion.div>
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 h-full flex items-end section-container pb-16 md:pb-24">
-          <div className="max-w-2xl">
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="label-sm text-white/60 mb-5">
-              
+          <motion.div
+            className="max-w-2xl"
+            variants={heroTextVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.p variants={heroChildVariants} className="label-sm text-white/60 mb-5">
               Advocacia · São Paulo · Desde 2003
             </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="heading-xl text-white mb-6">
-              
+            <motion.h1 variants={heroChildVariants} className="heading-xl text-white mb-6">
               Direito com
-              <em className="font-normal"> substância</em>
+              <em className="font-normal"> substância</em>
             </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="body-md text-white/70 max-w-sm mb-8">
-              
+            <motion.p variants={heroChildVariants} className="body-md text-white/70 max-w-sm mb-8">
               Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              className="flex gap-3">
-              
-              <Link to="/#contato" className="btn-primary">
-                Agendar Consulta <ArrowRight size={15} />
+            <motion.div variants={heroChildVariants} className="flex gap-3">
+              <Link to="/#contato" className="btn-primary group">
+                Agendar Consulta <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
-              <Link to="/#areas" className="inline-flex items-center gap-2 border border-white/30 text-white text-[13px] font-medium tracking-wide px-7 py-3 rounded-full hover:bg-white/10 transition-all font-body">
+              <Link to="/#areas" className="inline-flex items-center gap-2 border border-white/30 text-white text-[13px] font-medium tracking-wide px-7 py-3 rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300 font-body">
                 Nossas Áreas
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
-          
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+        >
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
             <ArrowDown size={18} className="text-white/40" />
           </motion.div>
@@ -106,56 +95,10 @@ const Index = () => {
       </section>
 
       {/* ═══ STATS BAR ═══ */}
-      <section className="relative -mt-6 z-20 pb-8">
-        <div className="section-container">
-          <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl shadow-black/5 border border-border/40 px-8 md:px-14 py-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-border/50">
-              {stats.map((stat, i) =>
-              <Reveal key={stat.label} delay={i * 0.12}>
-                  <div className="flex flex-col items-center text-center px-4">
-                    <span className="font-display text-4xl md:text-5xl font-medium text-primary">{stat.value}</span>
-                    <p className="font-body text-[13px] text-muted-foreground mt-2 tracking-wide">{stat.label}</p>
-                  </div>
-                </Reveal>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
+      <StatsBar />
 
       {/* ═══ ÁREAS ═══ */}
-      <section id="areas" className="section-gap">
-        <div className="section-container">
-          <Reveal>
-            <p className="label-sm mb-3">Especialidades</p>
-            <h2 className="heading-xl text-foreground mb-4">Áreas de atuação</h2>
-            <p className="body-md text-muted-foreground max-w-md mb-16">
-              Cobertura jurídica completa com profundidade técnica em cada disciplina.
-            </p>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
-            {areas.map((area, i) =>
-            <motion.div
-              key={area.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
-              className="group py-8 border-b border-border/60 flex gap-4 items-start">
-              
-                <area.icon size={22} strokeWidth={1.5} className="text-secondary mt-1 shrink-0 group-hover:text-accent transition-colors" />
-                <div>
-                  <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
-                    {area.title}
-                  </h3>
-                  <p className="body-sm text-muted-foreground">{area.desc}</p>
-                </div>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
+      <AreasSection />
 
       {/* ═══ SOBRE ═══ */}
       <section className="relative bg-card/60 backdrop-blur-sm">
@@ -202,8 +145,8 @@ const Index = () => {
               </div>
             </Reveal>
             <Reveal delay={0.15}>
-              <Link to="/blog" className="btn-outline text-[12px] px-5 py-2 hidden md:inline-flex">
-                Ver todos <ArrowRight size={14} />
+              <Link to="/blog" className="btn-outline text-[12px] px-5 py-2 hidden md:inline-flex group">
+                Ver todos <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </Reveal>
           </div>
@@ -212,13 +155,13 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {blogPosts.slice(1, 4).map((post, i) =>
-            <BlogCard key={post.id} post={post} index={i} />
+              <BlogCard key={post.id} post={post} index={i} />
             )}
           </div>
 
           <div className="mt-10">
             {blogPosts.slice(4, 6).map((post, i) =>
-            <BlogCard key={post.id} post={post} variant="compact" index={i} />
+              <BlogCard key={post.id} post={post} variant="compact" index={i} />
             )}
           </div>
 
@@ -234,8 +177,8 @@ const Index = () => {
       <ContactSection />
 
       <Footer />
-    </div>);
-
+    </div>
+  );
 };
 
 export default Index;

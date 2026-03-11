@@ -10,27 +10,41 @@ interface BlogCardProps {
   variant?: "default" | "compact";
 }
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 25, filter: "blur(4px)" },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  }),
+};
+
 const BlogCard = ({ post, featured = false, index = 0, variant = "default" }: BlogCardProps) => {
   if (featured) {
     return (
       <motion.article
         className="group"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
         <Link to={`/blog/${post.slug}`} className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-          <div className="overflow-hidden rounded-lg aspect-[4/3]">
+          <div className="overflow-hidden rounded-lg aspect-[4/3] shadow-md group-hover:shadow-xl transition-shadow duration-500">
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
             />
           </div>
           <div className="flex flex-col justify-center py-4">
             <p className="label-sm text-accent mb-3">{post.category}</p>
-            <h3 className="heading-lg text-foreground group-hover:text-secondary transition-colors mb-4">
+            <h3 className="heading-lg text-foreground group-hover:text-secondary transition-colors duration-300 mb-4">
               {post.title}
             </h3>
             <p className="body-md text-muted-foreground mb-6 max-w-md">
@@ -51,22 +65,23 @@ const BlogCard = ({ post, featured = false, index = 0, variant = "default" }: Bl
     return (
       <motion.article
         className="group"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        custom={index}
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.5, delay: index * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <Link to={`/blog/${post.slug}`} className="flex gap-4 py-5 border-b border-border/60 items-center">
-          <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+        <Link to={`/blog/${post.slug}`} className="flex gap-4 py-5 border-b border-border/60 items-center group-hover:pl-1 transition-all duration-300">
+          <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+            <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="font-body text-[10px] font-medium tracking-[0.1em] uppercase text-accent mb-1">{post.category}</p>
-            <h3 className="font-display text-base font-medium text-foreground group-hover:text-secondary transition-colors leading-snug line-clamp-1">
+            <h3 className="font-display text-base font-medium text-foreground group-hover:text-secondary transition-colors duration-300 leading-snug line-clamp-1">
               {post.title}
             </h3>
           </div>
-          <ArrowRight size={16} className="text-muted-foreground/40 group-hover:text-accent transition-colors flex-shrink-0" />
+          <ArrowRight size={16} className="text-muted-foreground/40 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
         </Link>
       </motion.article>
     );
@@ -75,21 +90,23 @@ const BlogCard = ({ post, featured = false, index = 0, variant = "default" }: Bl
   return (
     <motion.article
       className="group"
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      custom={index}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
+      whileHover={{ y: -4, transition: { duration: 0.3, ease: "easeOut" } }}
     >
       <Link to={`/blog/${post.slug}`} className="block">
-        <div className="overflow-hidden rounded-lg aspect-[16/10] mb-4">
+        <div className="overflow-hidden rounded-lg aspect-[16/10] mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-500">
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
           />
         </div>
         <p className="label-sm text-accent mb-2">{post.category}</p>
-        <h3 className="font-display text-lg md:text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2 leading-snug">
+        <h3 className="font-display text-lg md:text-xl font-medium text-foreground group-hover:text-secondary transition-colors duration-300 mb-2 leading-snug">
           {post.title}
         </h3>
         <p className="body-sm text-muted-foreground line-clamp-2 mb-3">{post.excerpt}</p>

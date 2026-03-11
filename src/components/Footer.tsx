@@ -1,55 +1,64 @@
 import { Link } from "react-router-dom";
+import Reveal from "@/components/Reveal";
 
 const Footer = () => (
   <footer className="border-t border-border">
     <div className="section-container py-16 md:py-20">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
-          <h3 className="font-display text-lg font-medium text-foreground mb-3">
-            Oliveira & Associados
-          </h3>
-          <p className="body-sm text-muted-foreground max-w-sm mb-6">
-            Advocacia com compromisso, clareza e resultados. Há mais de 20 anos construindo relações de confiança.
-          </p>
-          <p className="body-sm text-muted-foreground">
-            contato@oliveiraadvogados.com.br<br />
-            (11) 3000-0000
-          </p>
+          <Reveal>
+            <h3 className="font-display text-lg font-medium text-foreground mb-3">
+              Oliveira & Associados
+            </h3>
+            <p className="body-sm text-muted-foreground max-w-sm mb-6">
+              Advocacia com compromisso, clareza e resultados. Há mais de 20 anos construindo relações de confiança.
+            </p>
+            <p className="body-sm text-muted-foreground">
+              contato@oliveiraadvogados.com.br<br />
+              (11) 3000-0000
+            </p>
+          </Reveal>
         </div>
 
         <div className="md:col-span-3 md:col-start-7">
-          <p className="label-sm mb-4">Navegação</p>
-          <ul className="space-y-2.5">
-            {[
-              { label: "Áreas de Atuação", to: "/#areas" },
-              { label: "Equipe", to: "/#equipe" },
-              { label: "Blog", to: "/blog" },
-              { label: "Contato", to: "/#contato" },
-            ].map((item) => (
-              <li key={item.label}>
-                <Link to={item.to} className="body-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <Reveal delay={0.1}>
+            <p className="label-sm mb-4">Navegação</p>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Áreas de Atuação", to: "/#areas" },
+                { label: "Equipe", to: "/#equipe" },
+                { label: "Blog", to: "/blog" },
+                { label: "Contato", to: "/#contato" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link to={item.to} className="body-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
 
         <div className="md:col-span-3">
-          <p className="label-sm mb-4">Endereço</p>
-          <p className="body-sm text-muted-foreground">
-            Av. Paulista, 1000<br />
-            15º andar — São Paulo, SP<br />
-            01310-100
-          </p>
+          <Reveal delay={0.2}>
+            <p className="label-sm mb-4">Endereço</p>
+            <p className="body-sm text-muted-foreground">
+              Av. Paulista, 1000<br />
+              15º andar — São Paulo, SP<br />
+              01310-100
+            </p>
+          </Reveal>
         </div>
       </div>
 
-      <div className="border-t border-border mt-14 pt-6">
-        <p className="font-body text-[11px] text-muted-foreground/60">
-          © {new Date().getFullYear()} Oliveira & Associados. Todos os direitos reservados.
-        </p>
-      </div>
+      <Reveal>
+        <div className="border-t border-border mt-14 pt-6">
+          <p className="font-body text-[11px] text-muted-foreground/60">
+            © {new Date().getFullYear()} Oliveira & Associados. Todos os direitos reservados.
+          </p>
+        </div>
+      </Reveal>
     </div>
   </footer>
 );

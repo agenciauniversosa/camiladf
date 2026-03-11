@@ -12,6 +12,20 @@ const team = [
   { name: "Camila Ferreira", role: "Associada", specialty: "Direito Trabalhista · Imobiliário", bio: "Contencioso trabalhista e transações imobiliárias.", image: advogada4, oab: "OAB/SP 301.234" },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, filter: "blur(4px)" },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.6,
+      delay: i * 0.12,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  }),
+};
+
 const TeamSection = () => (
   <section id="equipe" className="section-gap">
     <div className="section-container">
@@ -29,17 +43,19 @@ const TeamSection = () => (
         {team.map((member, i) => (
           <motion.div
             key={member.name}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            custom={i}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="group"
+            whileHover={{ y: -6, transition: { duration: 0.3, ease: "easeOut" } }}
+            className="group cursor-default"
           >
-            <div className="overflow-hidden rounded-xl aspect-[3/4] mb-4">
+            <div className="overflow-hidden rounded-xl aspect-[3/4] mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-500">
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.05]"
               />
             </div>
             <h3 className="font-display text-lg font-medium text-foreground mb-0.5">{member.name}</h3>
