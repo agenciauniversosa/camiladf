@@ -200,9 +200,6 @@ const Navbar = () => {
           )}
         </AnimatePresence>
       </header>
-
-      {/* Spacer */}
-      <div className={`transition-all duration-700 ${scrolled ? "h-16" : "h-[100px]"}`} />
     </>
   );
 };
