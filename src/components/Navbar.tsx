@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -13,8 +13,8 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      setScrolled(currentY > 50);
-      if (currentY < 100) setVisible(true);
+      setScrolled(currentY > 40);
+      if (currentY < 80) setVisible(true);
       else if (currentY < lastScrollY.current) setVisible(true);
       else setVisible(false);
       lastScrollY.current = currentY;
@@ -26,121 +26,184 @@ const Navbar = () => {
   useEffect(() => setMobileOpen(false), [location]);
 
   const links = [
-    { to: "/#areas", label: "Áreas de Atuação" },
+    { to: "/#areas", label: "Áreas" },
     { to: "/#equipe", label: "Equipe" },
     { to: "/blog", label: "Blog" },
     { to: "/#contato", label: "Contato" },
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      {/* Floating pill navbar */}
-      <div className={`mx-auto transition-all duration-500 ${
-        scrolled 
-          ? "max-w-3xl mt-3 px-2" 
-          : "max-w-full mt-0 px-0"
-      }`}>
-        <nav className={`flex items-center justify-between transition-all duration-500 ${
-          scrolled
-            ? "bg-foreground/90 backdrop-blur-xl rounded-full px-6 py-2.5 shadow-lg shadow-foreground/5"
-            : "section-container h-20 bg-transparent"
-        }`}>
-          <Link 
-            to="/" 
-            className={`font-display text-lg font-medium transition-colors duration-300 ${
-              scrolled ? "text-background" : "text-foreground"
-            }`}
-          >
-            Oliveira & Associados
-          </Link>
-
-          <div className="hidden md:flex items-center gap-1">
-            {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={`font-body text-[13px] px-4 py-2 rounded-full transition-all duration-300 ${
-                  scrolled
-                    ? "text-background/70 hover:text-background hover:bg-background/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                }`}
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        {/* Top bar — only visible before scroll */}
+        <div
+          className={`overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            scrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"
+          }`}
+        >
+          <div className="bg-primary text-primary-foreground">
+            <div className="section-container flex items-center justify-end h-9 gap-6">
+              <a
+                href="tel:+5511999999999"
+                className="font-body text-[11px] tracking-wide flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
               >
-                {l.label}
-              </Link>
-            ))}
-            <Link
-              to="/#contato"
-              className={`font-body text-[12px] font-medium ml-2 px-5 py-2 rounded-full flex items-center gap-2 transition-all duration-300 ${
-                scrolled
-                  ? "bg-accent text-accent-foreground hover:bg-accent/90"
-                  : "bg-primary text-primary-foreground hover:bg-primary/90"
-              }`}
-            >
-              Consulta Gratuita
-              <ArrowRight size={14} />
-            </Link>
+                <Phone size={11} />
+                (11) 99999-9999
+              </a>
+              <span className="font-body text-[11px] tracking-wide opacity-60 hidden sm:inline">
+                Seg–Sex · 9h às 18h
+              </span>
+            </div>
           </div>
+        </div>
 
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className={`md:hidden p-2 rounded-full transition-colors ${
-              scrolled ? "text-background hover:bg-background/10" : "text-foreground hover:bg-muted/50"
-            }`}
-            aria-label="Menu"
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </nav>
-      </div>
+        {/* Main navbar */}
+        <div
+          className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            scrolled
+              ? "bg-background/95 backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.5)]"
+              : "bg-background/0"
+          }`}
+        >
+          <nav className="section-container flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <span className="font-display text-primary-foreground text-sm font-semibold leading-none">
+                  O
+                </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display text-[15px] font-semibold text-foreground leading-tight">
+                  Oliveira
+                </span>
+                <span className="font-body text-[9px] tracking-[0.2em] uppercase text-muted-foreground leading-tight">
+                  & Associados
+                </span>
+              </div>
+            </Link>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden mx-4 mt-2 bg-foreground/95 backdrop-blur-xl rounded-2xl overflow-hidden shadow-xl"
-          >
-            <div className="p-6 flex flex-col gap-1">
-              {links.map((l, i) => (
-                <motion.div
-                  key={l.to}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
+            {/* Desktop links */}
+            <div className="hidden md:flex items-center">
+              <div className="flex items-center gap-0.5 bg-muted/40 rounded-full p-1">
+                {links.map((l) => (
                   <Link
+                    key={l.to}
                     to={l.to}
-                    className="font-body text-sm text-background/80 hover:text-background py-3 px-4 rounded-xl hover:bg-background/10 transition-colors block"
+                    className="font-body text-[13px] text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-full hover:bg-background hover:shadow-sm transition-all duration-200"
                   >
                     {l.label}
                   </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: links.length * 0.05 }}
+                ))}
+              </div>
+              <Link
+                to="/#contato"
+                className="btn-primary text-[12px] px-5 py-2 ml-4"
               >
-                <Link
-                  to="/#contato"
-                  className="font-body text-[13px] font-medium bg-accent text-accent-foreground px-5 py-3 rounded-full flex items-center justify-center gap-2 mt-3 hover:bg-accent/90 transition-colors"
-                >
-                  Consulta Gratuita
-                  <ArrowRight size={14} />
-                </Link>
-              </motion.div>
+                Consulta Gratuita
+              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+
+            {/* Mobile toggle */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-muted/60 transition-colors"
+              aria-label="Menu"
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {mobileOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <X size={20} className="text-foreground" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <Menu size={20} className="text-foreground" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+          </nav>
+        </div>
+
+        {/* Mobile fullscreen overlay */}
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden fixed inset-0 top-[calc(theme(spacing.16)+theme(spacing.9))] bg-background z-40"
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                className="section-container pt-8 pb-10 flex flex-col h-full"
+              >
+                <div className="flex flex-col gap-1 flex-1">
+                  {links.map((l, i) => (
+                    <motion.div
+                      key={l.to}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 + i * 0.06, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                      <Link
+                        to={l.to}
+                        className="font-display text-3xl font-medium text-foreground py-4 block border-b border-border/50 hover:pl-2 transition-all duration-300"
+                      >
+                        {l.label}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + links.length * 0.06, duration: 0.4 }}
+                  className="mt-auto space-y-4"
+                >
+                  <Link
+                    to="/#contato"
+                    className="btn-primary w-full justify-center py-4 text-sm"
+                  >
+                    Consulta Gratuita
+                  </Link>
+                  <a
+                    href="tel:+5511999999999"
+                    className="font-body text-sm text-muted-foreground flex items-center justify-center gap-2"
+                  >
+                    <Phone size={14} />
+                    (11) 99999-9999
+                  </a>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+
+      {/* Spacer */}
+      <div className={`transition-all duration-700 ${scrolled ? "h-16" : "h-[100px]"}`} />
+    </>
   );
 };
 
