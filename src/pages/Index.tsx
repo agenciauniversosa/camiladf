@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import ContactSection from "@/components/ContactSection";
+import TeamSection from "@/components/TeamSection";
 
 const practiceAreas = [
   { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões." },
@@ -208,6 +209,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ─── EQUIPE ─── */}
+      <TeamSection />
 
       {/* ─── BLOG PREVIEW ─── */}
       <section className="section-padding">
