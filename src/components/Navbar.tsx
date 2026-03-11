@@ -57,7 +57,7 @@ const Navbar = () => {
         <div
           className={`transition-all duration-500 ${
             scrolled
-              ? "bg-background/60 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 shadow-[0_4px_30px_rgba(0,0,0,0.05)]"
+              ? "bg-white/95 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
               : "bg-transparent"
           }`}
         >
