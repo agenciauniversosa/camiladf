@@ -8,6 +8,7 @@ import BlogCard from "@/components/BlogCard";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import ContactSection from "@/components/ContactSection";
 
 const practiceAreas = [
   { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões." },
