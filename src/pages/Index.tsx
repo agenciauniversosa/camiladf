@@ -210,6 +210,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ─── EQUIPE ─── */}
+      <TeamSection />
+
       {/* ─── BLOG PREVIEW ─── */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto">
