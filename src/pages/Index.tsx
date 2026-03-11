@@ -66,7 +66,7 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="heading-xl text-white mb-6"
             >
-              Direito com<br />
+              Direito com
               <em className="font-normal">substância</em>
             </motion.h1>
             <motion.p
@@ -126,7 +126,7 @@ const Index = () => {
         <div className="section-container">
           <Reveal>
             <p className="label-sm mb-3">Especialidades</p>
-            <h2 className="heading-xl text-foreground mb-4">Áreas de<br />atuação</h2>
+            <h2 className="heading-xl text-foreground mb-4">Áreas de atuação</h2>
             <p className="body-md text-muted-foreground max-w-md mb-16">
               Cobertura jurídica completa com profundidade técnica em cada disciplina.
             </p>
@@ -159,7 +159,7 @@ const Index = () => {
             <Reveal>
               <div>
                 <p className="label-sm mb-3">Sobre nós</p>
-                <h2 className="heading-xl text-foreground mb-6">Advocacia com<br /><em className="font-normal">propósito</em></h2>
+                <h2 className="heading-xl text-foreground mb-6">Advocacia com <em className="font-normal">propósito</em></h2>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center">
@@ -193,7 +193,7 @@ const Index = () => {
             <Reveal>
               <div>
                 <p className="label-sm mb-3">Publicações</p>
-                <h2 className="heading-xl text-foreground">Artigos<br />recentes</h2>
+                <h2 className="heading-xl text-foreground">Artigos recentes</h2>
               </div>
             </Reveal>
             <Reveal delay={0.15}>
