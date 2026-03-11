@@ -186,7 +186,7 @@ const Index = () => {
       <TeamSection />
 
       {/* ═══ BLOG ═══ */}
-      <section className="section-gap bg-card">
+      <section className="section-gap relative bg-card/60 backdrop-blur-sm">
         <div className="section-container">
           <div className="flex items-end justify-between mb-14">
             <Reveal>
