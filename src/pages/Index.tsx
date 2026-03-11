@@ -152,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* ═══ SOBRE ═══ */}
-      <section className="bg-card">
+      <section className="relative bg-card/60 backdrop-blur-sm">
         <div className="section-container section-gap">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <Reveal>
