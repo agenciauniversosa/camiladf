@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
 import { blogPosts } from "@/lib/blogData";
 import BlogCard from "@/components/BlogCard";
@@ -11,255 +11,214 @@ import Reveal from "@/components/Reveal";
 import ContactSection from "@/components/ContactSection";
 import TeamSection from "@/components/TeamSection";
 
-const practiceAreas = [
-  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões." },
-  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados." },
-  { title: "Direito Empresarial", desc: "Assessoria societária, M&A e governança corporativa." },
-  { title: "Direito Penal", desc: "Defesa criminal em todas as instâncias." },
-  { title: "Direito Tributário", desc: "Planejamento fiscal e contencioso tributário." },
-  { title: "Direito Imobiliário", desc: "Transações, regularização e due diligence." },
+const areas = [
+  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada." },
+  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas." },
+  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa." },
+  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais." },
+  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário." },
+  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária." },
 ];
 
 const stats = [
-  { value: "20+", label: "Anos de atuação" },
-  { value: "500+", label: "Clientes atendidos" },
-  { value: "98%", label: "Satisfação" },
+  { value: "20+", label: "anos de atuação" },
+  { value: "500+", label: "clientes atendidos" },
+  { value: "98%", label: "de satisfação" },
 ];
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const heroImgY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-  const heroImgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const heroTextY = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* ─── HERO ─── */}
-      <section ref={heroRef} className="relative h-screen overflow-hidden">
-        <motion.div className="absolute inset-0" style={{ y: heroImgY, scale: heroImgScale }}>
-          <img
-            src={heroImage}
-            alt="Escritório de advocacia"
-            className="w-full h-[130%] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/30 to-background" />
+      {/* ═══ HERO ═══ */}
+      <section ref={heroRef} className="relative h-[100vh] min-h-[600px] overflow-hidden">
+        <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
+          <img src={heroImage} alt="Escritório" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-primary/30" />
+        </motion.div>
+
+        <motion.div style={{ opacity: heroOpacity }} className="relative z-10 h-full flex items-end section-container pb-16 md:pb-24">
+          <div className="max-w-2xl">
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="label-sm text-foreground/50 mb-5"
+            >
+              Advocacia · São Paulo · Desde 2003
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="heading-xl text-foreground mb-6"
+            >
+              Direito com<br />
+              <em className="font-normal">substância</em>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="body-md text-muted-foreground max-w-sm mb-8"
+            >
+              Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="flex gap-3"
+            >
+              <Link to="/#contato" className="btn-primary">
+                Agendar Consulta <ArrowRight size={15} />
+              </Link>
+              <Link to="/#areas" className="btn-outline">
+                Nossas Áreas
+              </Link>
+            </motion.div>
+          </div>
         </motion.div>
 
         <motion.div
-          style={{ opacity: heroOpacity, y: heroTextY }}
-          className="relative z-10 h-full flex flex-col justify-end px-6 md:px-12 lg:px-20 pb-20 md:pb-28"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.3 }}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
         >
-          <div className="max-w-5xl">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-              className="font-body text-[11px] md:text-xs tracking-[0.3em] uppercase text-primary-foreground/60 mb-6"
-            >
-              Advocacia · São Paulo
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-              className="heading-hero text-5xl md:text-7xl lg:text-[6rem] text-primary-foreground mb-8 text-balance"
-            >
-              Direito com
-              <br />
-              <span className="italic font-light">substância</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-              className="font-body text-sm md:text-base text-primary-foreground/60 max-w-md leading-relaxed"
-            >
-              Mais de duas décadas transformando complexidade jurídica em soluções claras e resultados concretos.
-            </motion.p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-            className="absolute bottom-8 right-6 md:right-12 lg:right-20"
-          >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <ArrowDown size={20} className="text-primary-foreground/40" />
-            </motion.div>
+          <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
+            <ArrowDown size={18} className="text-foreground/30" />
           </motion.div>
         </motion.div>
       </section>
 
-      {/* ─── AREAS DE ATUAÇÃO ─── */}
-      <section id="areas" className="section-padding">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 md:mb-20 gap-4">
-            <Reveal>
-              <div>
-                <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
-                  Especialidades
-                </p>
-                <h2 className="heading-display text-3xl md:text-5xl text-foreground">
-                  Áreas de Atuação
-                </h2>
-              </div>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="font-body text-sm text-muted-foreground max-w-xs leading-relaxed">
-                Cobertura jurídica completa com profundidade técnica em cada área.
-              </p>
-            </Reveal>
+      {/* ═══ STATS BAR ═══ */}
+      <section className="border-b border-border">
+        <div className="section-container py-10 md:py-14">
+          <div className="flex flex-wrap justify-center md:justify-between gap-10 md:gap-0">
+            {stats.map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 0.1}>
+                <div className="text-center md:text-left">
+                  <span className="font-display text-3xl md:text-4xl font-medium text-foreground">{stat.value}</span>
+                  <p className="font-body text-xs text-muted-foreground mt-1">{stat.label}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-            {practiceAreas.map((area, i) => (
+      {/* ═══ ÁREAS ═══ */}
+      <section id="areas" className="section-gap">
+        <div className="section-container">
+          <Reveal>
+            <p className="label-sm mb-3">Especialidades</p>
+            <h2 className="heading-xl text-foreground mb-4">Áreas de<br />atuação</h2>
+            <p className="body-md text-muted-foreground max-w-md mb-16">
+              Cobertura jurídica completa com profundidade técnica em cada disciplina.
+            </p>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
+            {areas.map((area, i) => (
               <motion.div
                 key={area.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{
-                  duration: 0.6,
-                  delay: i * 0.08,
-                  ease: [0.25, 0.1, 0.25, 1],
-                }}
-                className="group border-t border-border py-10 md:py-14 px-2 md:px-6 cursor-default"
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
+                className="group py-8 border-b border-border/60"
               >
-                <div className="flex items-start gap-4">
-                  <motion.span
-                    className="font-body text-[11px] text-muted-foreground/40 mt-2"
-                    whileHover={{ color: "hsl(var(--accent))" }}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </motion.span>
-                  <div>
-                    <h3 className="font-display text-xl md:text-2xl font-medium text-foreground mb-2 group-hover:text-secondary transition-colors duration-300">
-                      {area.title}
-                    </h3>
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                      {area.desc}
-                    </p>
-                    <div className="h-px w-0 bg-accent mt-6 group-hover:w-16 transition-all duration-700 ease-out" />
-                  </div>
-                </div>
+                <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
+                  {area.title}
+                </h3>
+                <p className="body-sm text-muted-foreground">{area.desc}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── SOBRE ─── */}
-      <section id="sobre" className="relative overflow-hidden">
-        <div className="bg-primary text-primary-foreground section-padding">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-              <div className="lg:col-span-4">
-                <Reveal>
-                  <p className="font-body text-[11px] tracking-[0.3em] uppercase text-primary-foreground/40 mb-3">
-                    Desde 2003
-                  </p>
-                  <h2 className="heading-display text-3xl md:text-5xl text-primary-foreground">
-                    Sobre o<br />Escritório
-                  </h2>
-                </Reveal>
+      {/* ═══ SOBRE ═══ */}
+      <section className="bg-card">
+        <div className="section-container section-gap">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <Reveal>
+              <div>
+                <p className="label-sm mb-3">Sobre nós</p>
+                <h2 className="heading-xl text-foreground mb-6">Advocacia com<br /><em className="font-normal">propósito</em></h2>
               </div>
-              <div className="lg:col-span-8 flex flex-col justify-center">
-                <Reveal delay={0.15}>
-                  <p className="font-display text-xl md:text-2xl lg:text-3xl font-light text-primary-foreground/80 leading-relaxed mb-8">
-                    "Acreditamos que a advocacia deve ser exercida com rigor técnico e sensibilidade humana."
+            </Reveal>
+            <div className="flex flex-col justify-center">
+              <Reveal delay={0.15}>
+                <blockquote className="font-display text-xl md:text-2xl font-normal text-foreground/80 leading-relaxed mb-8 italic">
+                  "Acreditamos que a advocacia deve ser exercida com rigor técnico e sensibilidade humana."
+                </blockquote>
+              </Reveal>
+              <Reveal delay={0.25}>
+                <div className="space-y-4">
+                  <p className="body-md text-muted-foreground">
+                    Fundado em 2003, o escritório Oliveira & Associados nasceu da convicção de que cada demanda jurídica carrega uma história que precisa ser ouvida com atenção.
                   </p>
-                </Reveal>
-                <Reveal delay={0.3}>
-                  <div className="space-y-5 max-w-2xl">
-                    <p className="font-body text-sm text-primary-foreground/50 leading-loose">
-                      Fundado em 2003, o escritório Oliveira & Associados nasceu da convicção de que cada demanda jurídica carrega uma história que precisa ser ouvida com atenção. Nossa equipe multidisciplinar atua nas mais diversas áreas do direito.
-                    </p>
-                    <p className="font-body text-sm text-primary-foreground/50 leading-loose">
-                      A relação entre advogado e cliente deve ser construída sobre transparência e confiança mútua. Cada processo é tratado com a dedicação que merece, porque entendemos que resultados duradouros nascem de uma compreensão profunda.
-                    </p>
-                  </div>
-                </Reveal>
-                <div className="flex gap-16 mt-12">
-                  {stats.map((stat, i) => (
-                    <Reveal key={stat.label} delay={0.4 + i * 0.15}>
-                      <div>
-                        <span className="font-display text-4xl md:text-5xl font-light text-accent">
-                          {stat.value}
-                        </span>
-                        <p className="font-body text-[11px] tracking-[0.2em] uppercase text-primary-foreground/40 mt-1">
-                          {stat.label}
-                        </p>
-                      </div>
-                    </Reveal>
-                  ))}
+                  <p className="body-md text-muted-foreground">
+                    A relação entre advogado e cliente deve ser construída sobre transparência e confiança mútua. Resultados duradouros nascem de uma compreensão profunda.
+                  </p>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── EQUIPE ─── */}
+      {/* ═══ EQUIPE ═══ */}
       <TeamSection />
 
-      {/* ─── BLOG PREVIEW ─── */}
-      <section className="section-padding">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 md:mb-20 gap-4">
+      {/* ═══ BLOG ═══ */}
+      <section className="section-gap bg-card">
+        <div className="section-container">
+          <div className="flex items-end justify-between mb-14">
             <Reveal>
               <div>
-                <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
-                  Publicações
-                </p>
-                <h2 className="heading-display text-3xl md:text-5xl text-foreground">
-                  Artigos Recentes
-                </h2>
+                <p className="label-sm mb-3">Publicações</p>
+                <h2 className="heading-xl text-foreground">Artigos<br />recentes</h2>
               </div>
             </Reveal>
-            <Reveal delay={0.2}>
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 font-body text-[13px] tracking-[0.1em] uppercase text-accent hover:text-foreground transition-colors"
-              >
-                Ver todos <ArrowUpRight size={14} />
+            <Reveal delay={0.15}>
+              <Link to="/blog" className="btn-outline text-[12px] px-5 py-2 hidden md:inline-flex">
+                Ver todos <ArrowRight size={14} />
               </Link>
             </Reveal>
           </div>
 
-          {/* Featured post */}
-          <BlogCard post={blogPosts[0]} featured index={0} />
+          <BlogCard post={blogPosts[0]} featured />
 
-          {/* Secondary grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border mt-px">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {blogPosts.slice(1, 4).map((post, i) => (
-              <div key={post.id} className="bg-background">
-                <BlogCard post={post} index={i + 1} />
-              </div>
+              <BlogCard key={post.id} post={post} index={i} />
             ))}
           </div>
 
-          {/* Compact list */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border mt-px">
+          <div className="mt-10">
             {blogPosts.slice(4, 6).map((post, i) => (
-              <div key={post.id} className="bg-background">
-                <BlogCard post={post} index={i + 4} variant="compact" />
-              </div>
+              <BlogCard key={post.id} post={post} variant="compact" index={i} />
             ))}
+          </div>
+
+          <div className="mt-8 text-center md:hidden">
+            <Link to="/blog" className="btn-outline text-[12px] px-5 py-2">
+              Ver todos os artigos <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* ═══ CONTATO ═══ */}
       <ContactSection />
 
       <Footer />
