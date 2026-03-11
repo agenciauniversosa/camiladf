@@ -111,7 +111,9 @@ const Navbar = () => {
             {/* Mobile toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-muted/60 transition-colors"
+              className={`md:hidden relative w-10 h-10 flex items-center justify-center rounded-full transition-colors ${
+                scrolled ? "hover:bg-muted/60" : "hover:bg-white/10"
+              }`}
               aria-label="Menu"
             >
               <AnimatePresence mode="wait" initial={false}>
