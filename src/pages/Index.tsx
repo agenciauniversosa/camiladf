@@ -55,7 +55,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="label-sm text-foreground/50 mb-5"
+              className="label-sm text-white/60 mb-5"
             >
               Advocacia · São Paulo · Desde 2003
             </motion.p>
