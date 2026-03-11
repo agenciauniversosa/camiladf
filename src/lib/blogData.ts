@@ -1,3 +1,10 @@
+import blog1 from "@/assets/blog/blog-1.jpg";
+import blog2 from "@/assets/blog/blog-2.jpg";
+import blog3 from "@/assets/blog/blog-3.jpg";
+import blog4 from "@/assets/blog/blog-4.jpg";
+import blog5 from "@/assets/blog/blog-5.jpg";
+import blog6 from "@/assets/blog/blog-6.jpg";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -6,6 +13,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   slug: string;
+  image: string;
 }
 
 export const categories = [
@@ -26,6 +34,7 @@ export const blogPosts: BlogPost[] = [
     date: "8 Mar 2026",
     readTime: "6 min",
     slug: "direito-digital-empresas",
+    image: blog1,
   },
   {
     id: "2",
@@ -35,6 +44,7 @@ export const blogPosts: BlogPost[] = [
     date: "2 Mar 2026",
     readTime: "8 min",
     slug: "reforma-trabalhista",
+    image: blog2,
   },
   {
     id: "3",
@@ -44,6 +54,7 @@ export const blogPosts: BlogPost[] = [
     date: "25 Fev 2026",
     readTime: "5 min",
     slug: "planejamento-sucessorio",
+    image: blog3,
   },
   {
     id: "4",
@@ -53,6 +64,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 Fev 2026",
     readTime: "10 min",
     slug: "tributacao-startups",
+    image: blog4,
   },
   {
     id: "5",
@@ -62,6 +74,7 @@ export const blogPosts: BlogPost[] = [
     date: "10 Fev 2026",
     readTime: "7 min",
     slug: "contratos-imobiliarios",
+    image: blog5,
   },
   {
     id: "6",
@@ -71,6 +84,7 @@ export const blogPosts: BlogPost[] = [
     date: "3 Fev 2026",
     readTime: "6 min",
     slug: "crimes-ciberneticos",
+    image: blog6,
   },
   {
     id: "7",
@@ -80,6 +94,7 @@ export const blogPosts: BlogPost[] = [
     date: "28 Jan 2026",
     readTime: "5 min",
     slug: "mediacao-arbitragem",
+    image: blog3,
   },
   {
     id: "8",
@@ -89,5 +104,6 @@ export const blogPosts: BlogPost[] = [
     date: "20 Jan 2026",
     readTime: "9 min",
     slug: "compliance-empresarial",
+    image: blog1,
   },
 ];
