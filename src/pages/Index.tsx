@@ -33,7 +33,13 @@ const Index = () => {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Ambient background orbs */}
+      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+        <div className="absolute -top-[30%] -right-[15%] w-[60vw] h-[60vw] rounded-full bg-accent/[0.04] blur-[120px]" />
+        <div className="absolute top-[40%] -left-[20%] w-[50vw] h-[50vw] rounded-full bg-secondary/[0.03] blur-[100px]" />
+        <div className="absolute -bottom-[20%] right-[10%] w-[40vw] h-[40vw] rounded-full bg-primary/[0.03] blur-[100px]" />
+      </div>
       <Navbar />
 
       {/* ═══ HERO ═══ */}
@@ -146,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* ═══ SOBRE ═══ */}
-      <section className="bg-card">
+      <section className="relative bg-card/60 backdrop-blur-sm">
         <div className="section-container section-gap">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <Reveal>
@@ -180,7 +186,7 @@ const Index = () => {
       <TeamSection />
 
       {/* ═══ BLOG ═══ */}
-      <section className="section-gap bg-card">
+      <section className="section-gap relative bg-card/60 backdrop-blur-sm">
         <div className="section-container">
           <div className="flex items-end justify-between mb-14">
             <Reveal>
