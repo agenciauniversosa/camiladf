@@ -149,6 +149,7 @@ const Index = () => {
                   </h3>
                   <p className="body-sm text-muted-foreground">{area.desc}</p>
                 </div>
+              </motion.div>
             ))}
           </div>
         </div>
