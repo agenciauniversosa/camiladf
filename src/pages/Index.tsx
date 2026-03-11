@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight, ArrowDown, Users, Briefcase, Building2, Shield, Receipt, Home } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
 import { blogPosts } from "@/lib/blogData";
 import BlogCard from "@/components/BlogCard";
