@@ -159,7 +159,7 @@ const Index = () => {
             <Reveal>
               <div>
                 <p className="label-sm mb-3">Sobre nós</p>
-                <h2 className="heading-xl text-foreground mb-6">Advocacia com<br /><em className="font-normal">propósito</em></h2>
+                <h2 className="heading-xl text-foreground mb-6">Advocacia com <em className="font-normal">propósito</em></h2>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center">
