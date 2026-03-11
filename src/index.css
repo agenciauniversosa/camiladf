@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,66 +6,58 @@
 
 @layer base {
   :root {
-    --background: 60 20% 97%;
-    --foreground: 63 40% 10%;
+    --background: 40 20% 98%;
+    --foreground: 40 10% 12%;
 
-    --card: 60 15% 93%;
-    --card-foreground: 63 40% 10%;
+    --card: 40 15% 95%;
+    --card-foreground: 40 10% 12%;
 
-    --popover: 60 20% 97%;
-    --popover-foreground: 63 40% 10%;
+    --popover: 40 20% 98%;
+    --popover-foreground: 40 10% 12%;
 
-    --primary: 63 100% 8%;
-    --primary-foreground: 60 20% 94%;
+    --primary: 75 30% 18%;
+    --primary-foreground: 40 15% 95%;
 
-    --secondary: 65 18% 45%;
-    --secondary-foreground: 60 20% 97%;
+    --secondary: 72 20% 38%;
+    --secondary-foreground: 40 20% 98%;
 
-    --muted: 55 12% 85%;
-    --muted-foreground: 55 8% 45%;
+    --muted: 40 10% 92%;
+    --muted-foreground: 40 5% 50%;
 
-    --accent: 46 45% 52%;
-    --accent-foreground: 63 100% 8%;
+    --accent: 45 50% 48%;
+    --accent-foreground: 40 10% 12%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 55 10% 88%;
-    --input: 55 10% 88%;
-    --ring: 65 18% 45%;
+    --border: 40 8% 90%;
+    --input: 40 8% 90%;
+    --ring: 72 20% 38%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --olive-dark: 63 100% 8%;
-    --olive-medium: 63 30% 26%;
-    --sage: 64 18% 45%;
-    --sage-light: 64 30% 66%;
-    --sage-pale: 60 25% 80%;
-    --warm-beige: 37 22% 68%;
-    --golden-olive: 49 30% 60%;
-
-    --font-display: 'Cormorant Garamond', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
   }
 
   .dark {
-    --background: 63 50% 4%;
-    --foreground: 60 25% 90%;
-    --card: 63 30% 10%;
-    --card-foreground: 60 25% 90%;
-    --popover: 63 30% 8%;
-    --popover-foreground: 60 25% 90%;
-    --primary: 60 25% 92%;
-    --primary-foreground: 63 100% 5%;
-    --secondary: 65 18% 30%;
-    --secondary-foreground: 60 25% 90%;
-    --muted: 63 15% 16%;
-    --muted-foreground: 55 10% 55%;
-    --accent: 46 40% 45%;
-    --accent-foreground: 60 25% 90%;
-    --border: 63 15% 18%;
-    --input: 63 15% 18%;
-    --ring: 65 18% 45%;
+    --background: 75 30% 4%;
+    --foreground: 40 15% 92%;
+    --card: 75 20% 8%;
+    --card-foreground: 40 15% 92%;
+    --popover: 75 20% 6%;
+    --popover-foreground: 40 15% 92%;
+    --primary: 40 15% 92%;
+    --primary-foreground: 75 30% 8%;
+    --secondary: 72 15% 28%;
+    --secondary-foreground: 40 15% 92%;
+    --muted: 75 10% 14%;
+    --muted-foreground: 40 5% 55%;
+    --accent: 45 45% 42%;
+    --accent-foreground: 40 15% 92%;
+    --border: 75 10% 16%;
+    --input: 75 10% 16%;
+    --ring: 72 20% 38%;
   }
 
   * {
@@ -73,12 +65,16 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.2);
   }
 }
 
@@ -89,30 +85,46 @@
 }
 
 @layer components {
-  .heading-display {
-    font-family: var(--font-display);
-    @apply font-semibold tracking-wide;
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 md:px-10;
   }
 
-  .heading-hero {
-    font-family: var(--font-display);
-    @apply font-light tracking-tight leading-none;
+  .section-gap {
+    @apply py-24 md:py-36;
   }
 
-  .text-body {
+  .label-sm {
     font-family: var(--font-body);
-    @apply font-light leading-relaxed;
+    @apply text-[11px] font-medium tracking-[0.15em] uppercase text-muted-foreground;
   }
 
-  .link-accent {
-    @apply text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-all;
+  .heading-xl {
+    font-family: var(--font-display);
+    @apply text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight;
   }
 
-  .section-padding {
-    @apply py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20;
+  .heading-lg {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl font-medium leading-tight tracking-tight;
   }
 
-  .divider-line {
-    @apply h-px bg-border w-full;
+  .body-md {
+    font-family: var(--font-body);
+    @apply text-[15px] leading-relaxed font-light;
+  }
+
+  .body-sm {
+    font-family: var(--font-body);
+    @apply text-sm leading-relaxed font-light;
+  }
+
+  .btn-primary {
+    font-family: var(--font-body);
+    @apply inline-flex items-center gap-2 bg-primary text-primary-foreground text-[13px] font-medium tracking-wide px-7 py-3 rounded-full hover:opacity-90 transition-opacity;
+  }
+
+  .btn-outline {
+    font-family: var(--font-body);
+    @apply inline-flex items-center gap-2 border border-foreground/20 text-foreground text-[13px] font-medium tracking-wide px-7 py-3 rounded-full hover:bg-foreground hover:text-background transition-all;
   }
 }
