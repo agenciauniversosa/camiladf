@@ -18,12 +18,10 @@ const BlogPost = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+    if (!post) navigate("/blog");
+  }, [slug, post, navigate]);
 
-  if (!post) {
-    useEffect(() => { navigate("/blog"); }, []);
-    return null;
-  }
+  if (!post) return null;
 
   return (
     <div className="min-h-screen bg-background">
