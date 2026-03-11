@@ -234,15 +234,22 @@ const Index = () => {
           </div>
 
           {/* Featured post */}
-          <div className="border-t border-border mb-0">
-            <BlogCard post={blogPosts[0]} featured index={0} />
+          <BlogCard post={blogPosts[0]} featured index={0} />
+
+          {/* Secondary grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border mt-px">
+            {blogPosts.slice(1, 4).map((post, i) => (
+              <div key={post.id} className="bg-background">
+                <BlogCard post={post} index={i + 1} />
+              </div>
+            ))}
           </div>
 
-          {/* Grid 5 posts */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.slice(1, 6).map((post, i) => (
-              <div key={post.id} className="border-t border-border">
-                <BlogCard post={post} index={i + 1} />
+          {/* Compact list */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border mt-px">
+            {blogPosts.slice(4, 6).map((post, i) => (
+              <div key={post.id} className="bg-background">
+                <BlogCard post={post} index={i + 4} variant="compact" />
               </div>
             ))}
           </div>

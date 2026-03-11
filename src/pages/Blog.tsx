@@ -97,10 +97,10 @@ const Blog = () => {
             {/* Posts */}
             <main className="flex-1 min-w-0">
               {filtered.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  {filtered.map((post) => (
-                    <div key={post.id} className="border-t border-border">
-                      <BlogCard post={post} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+                  {filtered.map((post, i) => (
+                    <div key={post.id} className="bg-background">
+                      <BlogCard post={post} index={i} />
                     </div>
                   ))}
                 </div>
