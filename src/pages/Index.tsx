@@ -106,7 +106,7 @@ const Index = () => {
       </section>
 
       {/* ═══ STATS BAR ═══ */}
-      <section className="relative -mt-10 z-20 pb-8">
+      <section className="relative mt-2 z-20 pb-8">
         <div className="section-container">
           <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl shadow-black/5 border border-border/40 px-8 md:px-14 py-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-border/50">
