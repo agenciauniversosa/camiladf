@@ -55,10 +55,10 @@ const Navbar = () => {
 
         {/* Main navbar */}
         <div
-          className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`transition-all duration-500 ${
             scrolled
-              ? "bg-background/95 backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.5)]"
-              : "bg-background/0"
+              ? "bg-background/60 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 shadow-[0_4px_30px_rgba(0,0,0,0.05)]"
+              : "bg-transparent"
           }`}
         >
           <nav className="section-container flex items-center justify-between h-16">
