@@ -17,7 +17,7 @@ const TeamSection = () => (
     <div className="section-container">
       <Reveal>
         <p className="label-sm mb-3">Equipe</p>
-        <h2 className="heading-xl text-foreground mb-4">Quem faz<br />acontecer</h2>
+        <h2 className="heading-xl text-foreground mb-4">Quem faz acontecer</h2>
         <p className="body-md text-muted-foreground max-w-md mb-16">
           Profissionais comprometidos com a excelência técnica e a ética em cada caso.
         </p>
