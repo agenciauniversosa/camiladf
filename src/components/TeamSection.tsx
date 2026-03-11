@@ -17,10 +17,12 @@ const TeamSection = () => (
     <div className="section-container">
       <Reveal>
         <p className="label-sm mb-3">Equipe</p>
-        <h2 className="heading-xl text-foreground mb-4">Quem faz acontecer</h2>
-        <p className="body-md text-muted-foreground max-w-md mb-16">
-          Profissionais comprometidos com a excelência técnica e a ética em cada caso.
-        </p>
+        <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-16">
+          <h2 className="heading-xl text-foreground">Quem faz acontecer</h2>
+          <p className="body-md text-muted-foreground max-w-md md:pb-1">
+            Profissionais comprometidos com a excelência técnica e a ética em cada caso.
+          </p>
+        </div>
       </Reveal>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
