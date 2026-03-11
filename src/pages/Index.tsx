@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight, ArrowDown, Users, Briefcase, Building2, Shield, Receipt, Home } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
 import { blogPosts } from "@/lib/blogData";
 import BlogCard from "@/components/BlogCard";
@@ -12,12 +12,12 @@ import ContactSection from "@/components/ContactSection";
 import TeamSection from "@/components/TeamSection";
 
 const areas = [
-  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada." },
-  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas." },
-  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa." },
-  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais." },
-  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário." },
-  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária." },
+  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada.", icon: Users },
+  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas.", icon: Briefcase },
+  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa.", icon: Building2 },
+  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais.", icon: Shield },
+  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário.", icon: Receipt },
+  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária.", icon: Home },
 ];
 
 const stats = [
@@ -140,12 +140,15 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
-                className="group py-8 border-b border-border/60"
+                className="group py-8 border-b border-border/60 flex gap-4 items-start"
               >
-                <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
-                  {area.title}
-                </h3>
-                <p className="body-sm text-muted-foreground">{area.desc}</p>
+                <area.icon size={22} strokeWidth={1.5} className="text-secondary mt-1 shrink-0 group-hover:text-accent transition-colors" />
+                <div>
+                  <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="body-sm text-muted-foreground">{area.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
