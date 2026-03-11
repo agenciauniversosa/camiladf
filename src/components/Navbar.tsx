@@ -125,7 +125,7 @@ const Navbar = () => {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <X size={20} className="text-foreground" />
+                    <X size={20} className={scrolled ? "text-foreground" : "text-white"} />
                   </motion.div>
                 ) : (
                   <motion.div
