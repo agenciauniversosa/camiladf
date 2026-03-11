@@ -66,7 +66,7 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="heading-xl text-white mb-6"
             >
-              Direito com<br />
+              Direito com
               <em className="font-normal">substância</em>
             </motion.h1>
             <motion.p
