@@ -55,7 +55,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="label-sm text-foreground/50 mb-5"
+              className="label-sm text-white/60 mb-5"
             >
               Advocacia · São Paulo · Desde 2003
             </motion.p>
@@ -63,7 +63,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="heading-xl text-foreground mb-6"
+              className="heading-xl text-white mb-6"
             >
               Direito com<br />
               <em className="font-normal">substância</em>
@@ -72,7 +72,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="body-md text-muted-foreground max-w-sm mb-8"
+              className="body-md text-white/70 max-w-sm mb-8"
             >
               Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
             </motion.p>
@@ -85,7 +85,7 @@ const Index = () => {
               <Link to="/#contato" className="btn-primary">
                 Agendar Consulta <ArrowRight size={15} />
               </Link>
-              <Link to="/#areas" className="btn-outline">
+              <Link to="/#areas" className="inline-flex items-center gap-2 border border-white/30 text-white text-[13px] font-medium tracking-wide px-7 py-3 rounded-full hover:bg-white/10 transition-all font-body">
                 Nossas Áreas
               </Link>
             </motion.div>
@@ -99,7 +99,7 @@ const Index = () => {
           className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
         >
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
-            <ArrowDown size={18} className="text-foreground/30" />
+            <ArrowDown size={18} className="text-white/40" />
           </motion.div>
         </motion.div>
       </section>
