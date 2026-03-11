@@ -193,7 +193,7 @@ const Index = () => {
             <Reveal>
               <div>
                 <p className="label-sm mb-3">Publicações</p>
-                <h2 className="heading-xl text-foreground">Artigos<br />recentes</h2>
+                <h2 className="heading-xl text-foreground">Artigos recentes</h2>
               </div>
             </Reveal>
             <Reveal delay={0.15}>
