@@ -72,7 +72,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="body-md text-muted-foreground max-w-sm mb-8"
+              className="body-md text-white/70 max-w-sm mb-8"
             >
               Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
             </motion.p>
