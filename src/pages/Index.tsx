@@ -106,17 +106,19 @@ const Index = () => {
       </section>
 
       {/* ═══ STATS BAR ═══ */}
-      <section className="border-b border-border">
-        <div className="section-container py-10 md:py-14">
-          <div className="flex flex-wrap justify-center md:justify-between gap-10 md:gap-0">
-            {stats.map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.1}>
-                <div className="text-center md:text-left">
-                  <span className="font-display text-3xl md:text-4xl font-medium text-foreground">{stat.value}</span>
-                  <p className="font-body text-xs text-muted-foreground mt-1">{stat.label}</p>
-                </div>
-              </Reveal>
-            ))}
+      <section className="relative -mt-20 z-20 pb-8">
+        <div className="section-container">
+          <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl shadow-black/5 border border-border/40 px-8 md:px-14 py-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-border/50">
+              {stats.map((stat, i) => (
+                <Reveal key={stat.label} delay={i * 0.12}>
+                  <div className="flex flex-col items-center text-center px-4">
+                    <span className="font-display text-4xl md:text-5xl font-medium text-primary">{stat.value}</span>
+                    <p className="font-body text-[13px] text-muted-foreground mt-2 tracking-wide">{stat.label}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
