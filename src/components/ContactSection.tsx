@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Check, Loader2 } from "lucide-react";
+import { ArrowRight, Check, Loader2 } from "lucide-react";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -15,7 +15,6 @@ const contactSchema = z.object({
 });
 
 type ContactForm = z.infer<typeof contactSchema>;
-
 const initialForm: ContactForm = { name: "", email: "", phone: "", subject: "", message: "" };
 
 const ContactSection = () => {
@@ -26,15 +25,12 @@ const ContactSection = () => {
 
   const handleChange = (field: keyof ContactForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
-    }
+    if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
-
     const result = contactSchema.safeParse(form);
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof ContactForm, string>> = {};
@@ -47,7 +43,6 @@ const ContactSection = () => {
     }
 
     setStatus("sending");
-
     const { error } = await supabase.from("contact_submissions").insert({
       name: result.data.name,
       email: result.data.email,
@@ -58,11 +53,7 @@ const ContactSection = () => {
 
     if (error) {
       setStatus("idle");
-      toast({
-        title: "Erro ao enviar",
-        description: "Tente novamente em instantes.",
-        variant: "destructive",
-      });
+      toast({ title: "Erro ao enviar", description: "Tente novamente em instantes.", variant: "destructive" });
       return;
     }
 
@@ -72,118 +63,72 @@ const ContactSection = () => {
     setTimeout(() => setStatus("idle"), 4000);
   };
 
-  const inputClasses =
-    "w-full bg-transparent border-b border-primary-foreground/20 py-3 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:border-accent transition-colors";
-
-  const errorClass = "font-body text-[11px] text-destructive mt-1";
+  const inputCls =
+    "w-full bg-muted/50 rounded-lg px-4 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all";
 
   return (
-    <section id="contato" className="bg-primary text-primary-foreground section-padding">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
-          {/* Left */}
-          <div className="lg:col-span-4">
-            <Reveal>
-              <p className="font-body text-[11px] tracking-[0.3em] uppercase text-primary-foreground/40 mb-3">
-                Contato
-              </p>
-              <h2 className="heading-display text-3xl md:text-5xl text-primary-foreground mb-6">
-                Fale<br />Conosco
+    <section id="contato" className="section-gap bg-primary text-primary-foreground">
+      <div className="section-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          <Reveal>
+            <div>
+              <p className="font-body text-[11px] font-medium tracking-[0.15em] uppercase text-primary-foreground/40 mb-3">Contato</p>
+              <h2 className="font-display text-4xl md:text-5xl font-medium text-primary-foreground leading-tight tracking-tight mb-6">
+                Vamos<br />conversar?
               </h2>
-              <p className="font-body text-sm text-primary-foreground/50 leading-relaxed mb-8">
+              <p className="body-md text-primary-foreground/60 mb-10 max-w-sm">
                 Preencha o formulário e nossa equipe entrará em contato em até 24 horas úteis.
               </p>
-              <div className="space-y-3 font-body text-sm text-primary-foreground/40">
+              <div className="space-y-2 body-sm text-primary-foreground/40">
                 <p>Av. Paulista, 1000 — 15º andar</p>
                 <p>São Paulo — SP, 01310-100</p>
-                <p className="mt-4">contato@oliveiraadvogados.com.br</p>
+                <p className="mt-3">contato@oliveiraadvogados.com.br</p>
                 <p>(11) 3000-0000</p>
               </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
-          {/* Form */}
-          <div className="lg:col-span-8">
-            <Reveal delay={0.2}>
-              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Nome completo *"
-                      value={form.name}
-                      onChange={(e) => handleChange("name", e.target.value)}
-                      className={inputClasses}
-                      maxLength={100}
-                    />
-                    {errors.name && <p className={errorClass}>{errors.name}</p>}
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email *"
-                      value={form.email}
-                      onChange={(e) => handleChange("email", e.target.value)}
-                      className={inputClasses}
-                      maxLength={255}
-                    />
-                    {errors.email && <p className={errorClass}>{errors.email}</p>}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="Telefone"
-                      value={form.phone}
-                      onChange={(e) => handleChange("phone", e.target.value)}
-                      className={inputClasses}
-                      maxLength={20}
-                    />
-                    {errors.phone && <p className={errorClass}>{errors.phone}</p>}
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Assunto *"
-                      value={form.subject}
-                      onChange={(e) => handleChange("subject", e.target.value)}
-                      className={inputClasses}
-                      maxLength={200}
-                    />
-                    {errors.subject && <p className={errorClass}>{errors.subject}</p>}
-                  </div>
-                </div>
-
+          <Reveal delay={0.15}>
+            <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <textarea
-                    placeholder="Sua mensagem *"
-                    value={form.message}
-                    onChange={(e) => handleChange("message", e.target.value)}
-                    className={`${inputClasses} resize-none min-h-[120px]`}
-                    maxLength={2000}
-                    rows={4}
-                  />
-                  {errors.message && <p className={errorClass}>{errors.message}</p>}
+                  <input type="text" placeholder="Nome completo" value={form.name} onChange={(e) => handleChange("name", e.target.value)} className={inputCls} maxLength={100} />
+                  {errors.name && <p className="text-destructive text-[11px] mt-1">{errors.name}</p>}
                 </div>
+                <div>
+                  <input type="email" placeholder="Email" value={form.email} onChange={(e) => handleChange("email", e.target.value)} className={inputCls} maxLength={255} />
+                  {errors.email && <p className="text-destructive text-[11px] mt-1">{errors.email}</p>}
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <input type="tel" placeholder="Telefone" value={form.phone} onChange={(e) => handleChange("phone", e.target.value)} className={inputCls} maxLength={20} />
+                </div>
+                <div>
+                  <input type="text" placeholder="Assunto" value={form.subject} onChange={(e) => handleChange("subject", e.target.value)} className={inputCls} maxLength={200} />
+                  {errors.subject && <p className="text-destructive text-[11px] mt-1">{errors.subject}</p>}
+                </div>
+              </div>
+              <div>
+                <textarea placeholder="Sua mensagem" value={form.message} onChange={(e) => handleChange("message", e.target.value)} className={`${inputCls} resize-none min-h-[130px]`} maxLength={2000} rows={5} />
+                {errors.message && <p className="text-destructive text-[11px] mt-1">{errors.message}</p>}
+              </div>
 
-                <motion.button
-                  type="submit"
-                  disabled={status !== "idle"}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-[13px] tracking-[0.1em] uppercase px-8 py-3.5 hover:bg-golden-olive transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {status === "sending" && <Loader2 size={16} className="animate-spin" />}
-                  {status === "sent" && <Check size={16} />}
-                  {status === "idle" && "Enviar Mensagem"}
-                  {status === "sending" && "Enviando..."}
-                  {status === "sent" && "Enviado!"}
-                  {status === "idle" && <ArrowUpRight size={14} />}
-                </motion.button>
-              </form>
-            </Reveal>
-          </div>
+              <motion.button
+                type="submit"
+                disabled={status !== "idle"}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-body text-[13px] font-medium px-7 py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50"
+              >
+                {status === "sending" && <Loader2 size={15} className="animate-spin" />}
+                {status === "sent" && <Check size={15} />}
+                {status === "idle" && "Enviar Mensagem"}
+                {status === "sending" && "Enviando..."}
+                {status === "sent" && "Enviado!"}
+                {status === "idle" && <ArrowRight size={14} />}
+              </motion.button>
+            </form>
+          </Reveal>
         </div>
       </div>
     </section>

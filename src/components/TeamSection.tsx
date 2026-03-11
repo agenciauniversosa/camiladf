@@ -6,103 +6,43 @@ import advogada4 from "@/assets/team/advogada-4.jpg";
 import Reveal from "@/components/Reveal";
 
 const team = [
-  {
-    name: "Ricardo Oliveira",
-    role: "Sócio Fundador",
-    specialty: "Direito Empresarial · Tributário",
-    bio: "Mais de 25 anos de experiência em assessoria societária e planejamento tributário para empresas de médio e grande porte.",
-    image: advogado1,
-    oab: "OAB/SP 123.456",
-  },
-  {
-    name: "Mariana Costa",
-    role: "Sócia",
-    specialty: "Direito Civil · Família e Sucessões",
-    bio: "Especialista em planejamento sucessório e direito de família, com atuação focada em mediação e soluções consensuais.",
-    image: advogada2,
-    oab: "OAB/SP 189.012",
-  },
-  {
-    name: "Lucas Andrade",
-    role: "Associado Sênior",
-    specialty: "Direito Penal · Digital",
-    bio: "Defesa criminal estratégica com foco em crimes cibernéticos e compliance. Mestre em Direito Penal pela USP.",
-    image: advogado3,
-    oab: "OAB/SP 234.567",
-  },
-  {
-    name: "Camila Ferreira",
-    role: "Associada",
-    specialty: "Direito Trabalhista · Imobiliário",
-    bio: "Atua em contencioso trabalhista e transações imobiliárias, com experiência em due diligence e contratos complexos.",
-    image: advogada4,
-    oab: "OAB/SP 301.234",
-  },
+  { name: "Ricardo Oliveira", role: "Sócio Fundador", specialty: "Direito Empresarial · Tributário", bio: "Mais de 25 anos de experiência em assessoria societária e planejamento tributário.", image: advogado1, oab: "OAB/SP 123.456" },
+  { name: "Mariana Costa", role: "Sócia", specialty: "Direito Civil · Família e Sucessões", bio: "Especialista em planejamento sucessório com foco em mediação.", image: advogada2, oab: "OAB/SP 189.012" },
+  { name: "Lucas Andrade", role: "Associado Sênior", specialty: "Direito Penal · Digital", bio: "Defesa criminal com foco em crimes cibernéticos. Mestre pela USP.", image: advogado3, oab: "OAB/SP 234.567" },
+  { name: "Camila Ferreira", role: "Associada", specialty: "Direito Trabalhista · Imobiliário", bio: "Contencioso trabalhista e transações imobiliárias.", image: advogada4, oab: "OAB/SP 301.234" },
 ];
 
 const TeamSection = () => (
-  <section id="equipe" className="section-padding bg-card">
-    <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 md:mb-20 gap-4">
-        <Reveal>
-          <div>
-            <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
-              Quem somos
-            </p>
-            <h2 className="heading-display text-3xl md:text-5xl text-foreground">
-              Nossa Equipe
-            </h2>
-          </div>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="font-body text-sm text-muted-foreground max-w-xs leading-relaxed">
-            Profissionais comprometidos com a excelência e a ética em cada caso.
-          </p>
-        </Reveal>
-      </div>
+  <section id="equipe" className="section-gap">
+    <div className="section-container">
+      <Reveal>
+        <p className="label-sm mb-3">Equipe</p>
+        <h2 className="heading-xl text-foreground mb-4">Quem faz<br />acontecer</h2>
+        <p className="body-md text-muted-foreground max-w-md mb-16">
+          Profissionais comprometidos com a excelência técnica e a ética em cada caso.
+        </p>
+      </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {team.map((member, i) => (
           <motion.div
             key={member.name}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="group bg-background"
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="group"
           >
-            {/* Photo */}
-            <div className="relative overflow-hidden aspect-[3/4]">
+            <div className="overflow-hidden rounded-xl aspect-[3/4] mb-4">
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              {/* Overlay info on hover */}
-              <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <p className="font-body text-xs text-primary-foreground/70 leading-relaxed">
-                  {member.bio}
-                </p>
-              </div>
             </div>
-
-            {/* Info */}
-            <div className="p-5 md:p-6">
-              <h3 className="font-display text-xl font-medium text-foreground mb-0.5">
-                {member.name}
-              </h3>
-              <p className="font-body text-[11px] tracking-[0.15em] uppercase text-accent mb-2">
-                {member.role}
-              </p>
-              <p className="font-body text-xs text-muted-foreground">
-                {member.specialty}
-              </p>
-              <p className="font-body text-[10px] text-muted-foreground/50 mt-3">
-                {member.oab}
-              </p>
-            </div>
+            <h3 className="font-display text-lg font-medium text-foreground mb-0.5">{member.name}</h3>
+            <p className="font-body text-[12px] font-medium text-accent mb-1">{member.role}</p>
+            <p className="font-body text-xs text-muted-foreground">{member.specialty}</p>
           </motion.div>
         ))}
       </div>

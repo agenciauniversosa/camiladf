@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { BlogPost } from "@/lib/blogData";
 
 interface BlogCardProps {
@@ -15,42 +15,31 @@ const BlogCard = ({ post, featured = false, index = 0, variant = "default" }: Bl
     return (
       <motion.article
         className="group"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <Link to={`/blog/${post.slug}`} className="block">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Image */}
-            <div className="relative overflow-hidden aspect-[4/3] lg:aspect-auto">
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500" />
-            </div>
-            {/* Content */}
-            <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-              <span className="font-body text-[11px] tracking-[0.25em] uppercase text-accent mb-4">
-                {post.category}
-              </span>
-              <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-foreground group-hover:text-secondary transition-colors duration-300 mb-4 leading-snug">
-                {post.title}
-              </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6 max-w-md">
-                {post.excerpt}
-              </p>
-              <div className="flex items-center gap-4">
-                <span className="font-body text-[11px] text-muted-foreground tracking-wide">
-                  {post.date} · {post.readTime}
-                </span>
-                <ArrowUpRight
-                  size={18}
-                  className="text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
-                />
-              </div>
+        <Link to={`/blog/${post.slug}`} className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+          <div className="overflow-hidden rounded-lg aspect-[4/3]">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            />
+          </div>
+          <div className="flex flex-col justify-center py-4">
+            <p className="label-sm text-accent mb-3">{post.category}</p>
+            <h3 className="heading-lg text-foreground group-hover:text-secondary transition-colors mb-4">
+              {post.title}
+            </h3>
+            <p className="body-md text-muted-foreground mb-6 max-w-md">
+              {post.excerpt}
+            </p>
+            <div className="flex items-center gap-2 body-sm text-muted-foreground">
+              <span>{post.date}</span>
+              <span>·</span>
+              <span>{post.readTime}</span>
             </div>
           </div>
         </Link>
@@ -62,76 +51,49 @@ const BlogCard = ({ post, featured = false, index = 0, variant = "default" }: Bl
     return (
       <motion.article
         className="group"
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.5, delay: index * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <Link to={`/blog/${post.slug}`} className="flex gap-5 p-5 md:p-6 h-full">
-          <div className="w-20 h-20 md:w-24 md:h-24 flex-shrink-0 overflow-hidden">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+        <Link to={`/blog/${post.slug}`} className="flex gap-4 py-5 border-b border-border/60 items-center">
+          <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
           </div>
-          <div className="flex flex-col justify-center min-w-0">
-            <span className="font-body text-[10px] tracking-[0.2em] uppercase text-accent mb-1.5">
-              {post.category}
-            </span>
-            <h3 className="font-display text-base md:text-lg font-medium text-foreground group-hover:text-secondary transition-colors duration-300 leading-snug line-clamp-2">
+          <div className="flex-1 min-w-0">
+            <p className="font-body text-[10px] font-medium tracking-[0.1em] uppercase text-accent mb-1">{post.category}</p>
+            <h3 className="font-display text-base font-medium text-foreground group-hover:text-secondary transition-colors leading-snug line-clamp-1">
               {post.title}
             </h3>
-            <span className="font-body text-[10px] text-muted-foreground mt-2">
-              {post.date}
-            </span>
           </div>
+          <ArrowRight size={16} className="text-muted-foreground/40 group-hover:text-accent transition-colors flex-shrink-0" />
         </Link>
       </motion.article>
     );
   }
 
-  // Default card with image
   return (
     <motion.article
       className="group"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
     >
-      <Link to={`/blog/${post.slug}`} className="block h-full">
-        {/* Image */}
-        <div className="relative overflow-hidden aspect-[16/10]">
+      <Link to={`/blog/${post.slug}`} className="block">
+        <div className="overflow-hidden rounded-lg aspect-[16/10] mb-4">
           <img
             src={post.image}
             alt={post.title}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
           />
-          <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500" />
-          <span className="absolute top-4 left-4 font-body text-[10px] tracking-[0.2em] uppercase bg-background/90 backdrop-blur-sm text-accent px-3 py-1.5">
-            {post.category}
-          </span>
         </div>
-
-        {/* Content */}
-        <div className="p-5 md:p-6">
-          <h3 className="font-display text-lg md:text-xl font-medium text-foreground group-hover:text-secondary transition-colors duration-300 mb-2.5 leading-snug">
-            {post.title}
-          </h3>
-          <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
-            {post.excerpt}
-          </p>
-          <div className="flex items-center justify-between">
-            <span className="font-body text-[11px] text-muted-foreground tracking-wide">
-              {post.date} · {post.readTime}
-            </span>
-            <ArrowUpRight
-              size={16}
-              className="text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
-            />
-          </div>
-        </div>
+        <p className="label-sm text-accent mb-2">{post.category}</p>
+        <h3 className="font-display text-lg md:text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2 leading-snug">
+          {post.title}
+        </h3>
+        <p className="body-sm text-muted-foreground line-clamp-2 mb-3">{post.excerpt}</p>
+        <p className="font-body text-[11px] text-muted-foreground/60">{post.date} · {post.readTime}</p>
       </Link>
     </motion.article>
   );
