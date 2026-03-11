@@ -12,19 +12,19 @@ import ContactSection from "@/components/ContactSection";
 import TeamSection from "@/components/TeamSection";
 
 const areas = [
-  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada.", icon: Users },
-  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas.", icon: Briefcase },
-  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa.", icon: Building2 },
-  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais.", icon: Shield },
-  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário.", icon: Receipt },
-  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária.", icon: Home },
-];
+{ title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada.", icon: Users },
+{ title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas.", icon: Briefcase },
+{ title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa.", icon: Building2 },
+{ title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais.", icon: Shield },
+{ title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário.", icon: Receipt },
+{ title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária.", icon: Home }];
+
 
 const stats = [
-  { value: "20+", label: "anos de atuação" },
-  { value: "500+", label: "clientes atendidos" },
-  { value: "98%", label: "de satisfação" },
-];
+{ value: "20+", label: "anos de atuação" },
+{ value: "500+", label: "clientes atendidos" },
+{ value: "98%", label: "de satisfação" }];
+
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -56,33 +56,33 @@ const Index = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="label-sm text-white/60 mb-5"
-            >
+              className="label-sm text-white/60 mb-5">
+              
               Advocacia · São Paulo · Desde 2003
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="heading-xl text-white mb-6"
-            >
+              className="heading-xl text-white mb-6">
+              
               Direito com
-              <em className="font-normal">substância</em>
+              <em className="font-normal"> substância</em>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="body-md text-white/70 max-w-sm mb-8"
-            >
+              className="body-md text-white/70 max-w-sm mb-8">
+              
               Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
-              className="flex gap-3"
-            >
+              className="flex gap-3">
+              
               <Link to="/#contato" className="btn-primary">
                 Agendar Consulta <ArrowRight size={15} />
               </Link>
@@ -97,8 +97,8 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
-        >
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
+          
           <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
             <ArrowDown size={18} className="text-white/40" />
           </motion.div>
@@ -110,14 +110,14 @@ const Index = () => {
         <div className="section-container">
           <div className="bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl shadow-black/5 border border-border/40 px-8 md:px-14 py-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x divide-border/50">
-              {stats.map((stat, i) => (
-                <Reveal key={stat.label} delay={i * 0.12}>
+              {stats.map((stat, i) =>
+              <Reveal key={stat.label} delay={i * 0.12}>
                   <div className="flex flex-col items-center text-center px-4">
                     <span className="font-display text-4xl md:text-5xl font-medium text-primary">{stat.value}</span>
                     <p className="font-body text-[13px] text-muted-foreground mt-2 tracking-wide">{stat.label}</p>
                   </div>
                 </Reveal>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -135,15 +135,15 @@ const Index = () => {
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
-            {areas.map((area, i) => (
-              <motion.div
-                key={area.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
-                className="group py-8 border-b border-border/60 flex gap-4 items-start"
-              >
+            {areas.map((area, i) =>
+            <motion.div
+              key={area.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
+              className="group py-8 border-b border-border/60 flex gap-4 items-start">
+              
                 <area.icon size={22} strokeWidth={1.5} className="text-secondary mt-1 shrink-0 group-hover:text-accent transition-colors" />
                 <div>
                   <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
@@ -152,7 +152,7 @@ const Index = () => {
                   <p className="body-sm text-muted-foreground">{area.desc}</p>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -211,15 +211,15 @@ const Index = () => {
           <BlogCard post={blogPosts[0]} featured />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {blogPosts.slice(1, 4).map((post, i) => (
-              <BlogCard key={post.id} post={post} index={i} />
-            ))}
+            {blogPosts.slice(1, 4).map((post, i) =>
+            <BlogCard key={post.id} post={post} index={i} />
+            )}
           </div>
 
           <div className="mt-10">
-            {blogPosts.slice(4, 6).map((post, i) => (
-              <BlogCard key={post.id} post={post} variant="compact" index={i} />
-            ))}
+            {blogPosts.slice(4, 6).map((post, i) =>
+            <BlogCard key={post.id} post={post} variant="compact" index={i} />
+            )}
           </div>
 
           <div className="mt-8 text-center md:hidden">
@@ -234,8 +234,8 @@ const Index = () => {
       <ContactSection />
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
