@@ -70,7 +70,7 @@ const Navbar = () => {
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className={`font-display text-[15px] font-semibold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}>
+                <span className={`font-display text-[15px] font-semibold leading-tight transition-colors duration-300 ${scrolled ? "text-gray-800" : "text-white"}`}>
                   Oliveira
                 </span>
                 <span className={`font-body text-[9px] tracking-[0.2em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-white/60"}`}>
