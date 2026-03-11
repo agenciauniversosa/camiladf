@@ -53,7 +53,7 @@ const Footer = () => (
           </ul>
         </div>
 
-        <div id="contato">
+        <div>
           <h4 className="font-body text-xs tracking-[0.2em] uppercase text-primary-foreground/40 mb-4">
             Contato
           </h4>
