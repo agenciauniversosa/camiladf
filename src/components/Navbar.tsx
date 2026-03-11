@@ -135,7 +135,7 @@ const Navbar = () => {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <Menu size={20} className={scrolled ? "text-foreground" : "text-white"} />
+                    <Menu size={20} className={scrolled ? "text-gray-800" : "text-white"} />
                   </motion.div>
                 )}
               </AnimatePresence>
