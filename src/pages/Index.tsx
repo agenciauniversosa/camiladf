@@ -85,7 +85,7 @@ const Index = () => {
               <Link to="/#contato" className="btn-primary">
                 Agendar Consulta <ArrowRight size={15} />
               </Link>
-              <Link to="/#areas" className="btn-outline">
+              <Link to="/#areas" className="inline-flex items-center gap-2 border border-white/30 text-white text-[13px] font-medium tracking-wide px-7 py-3 rounded-full hover:bg-white/10 transition-all font-body">
                 Nossas Áreas
               </Link>
             </motion.div>
