@@ -12,12 +12,12 @@ import ContactSection from "@/components/ContactSection";
 import TeamSection from "@/components/TeamSection";
 
 const areas = [
-  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada." },
-  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas." },
-  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa." },
-  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais." },
-  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário." },
-  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária." },
+  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada.", icon: Users },
+  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas.", icon: Briefcase },
+  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa.", icon: Building2 },
+  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais.", icon: Shield },
+  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário.", icon: Receipt },
+  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária.", icon: Home },
 ];
 
 const stats = [
