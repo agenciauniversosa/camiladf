@@ -73,12 +73,14 @@ const ContactSection = () => {
           <Reveal>
             <div>
               <p className="font-body text-[11px] font-medium tracking-[0.15em] uppercase text-primary-foreground/40 mb-3">Contato</p>
-              <h2 className="font-display text-4xl md:text-5xl font-medium text-primary-foreground leading-tight tracking-tight mb-6">
-                Vamos<br />conversar?
-              </h2>
-              <p className="body-md text-primary-foreground/60 mb-10 max-w-sm">
-                Preencha o formulário e nossa equipe entrará em contato em até 24 horas úteis.
-              </p>
+              <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 mb-10">
+                <h2 className="font-display text-4xl md:text-5xl font-medium text-primary-foreground leading-tight tracking-tight">
+                  Vamos conversar?
+                </h2>
+                <p className="body-md text-primary-foreground/60 max-w-sm md:pb-1">
+                  Preencha o formulário e nossa equipe entrará em contato em até 24 horas úteis.
+                </p>
+              </div>
               <div className="space-y-2 body-sm text-primary-foreground/40">
                 <p>Av. Paulista, 1000 — 15º andar</p>
                 <p>São Paulo — SP, 01310-100</p>
