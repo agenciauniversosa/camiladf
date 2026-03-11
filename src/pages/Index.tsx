@@ -249,6 +249,8 @@ const Index = () => {
         </div>
       </section>
 
+      <ContactSection />
+
       <Footer />
     </div>
   );
