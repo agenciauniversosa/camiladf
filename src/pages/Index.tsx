@@ -126,7 +126,7 @@ const Index = () => {
         <div className="section-container">
           <Reveal>
             <p className="label-sm mb-3">Especialidades</p>
-            <h2 className="heading-xl text-foreground mb-4">Áreas de<br />atuação</h2>
+            <h2 className="heading-xl text-foreground mb-4">Áreas de atuação</h2>
             <p className="body-md text-muted-foreground max-w-md mb-16">
               Cobertura jurídica completa com profundidade técnica em cada disciplina.
             </p>
