@@ -140,13 +140,15 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
-                className="group py-8 border-b border-border/60"
+                className="group py-8 border-b border-border/60 flex gap-4 items-start"
               >
-                <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
-                  {area.title}
-                </h3>
-                <p className="body-sm text-muted-foreground">{area.desc}</p>
-              </motion.div>
+                <area.icon size={22} strokeWidth={1.5} className="text-secondary mt-1 shrink-0 group-hover:text-accent transition-colors" />
+                <div>
+                  <h3 className="font-display text-xl font-medium text-foreground group-hover:text-secondary transition-colors mb-2">
+                    {area.title}
+                  </h3>
+                  <p className="body-sm text-muted-foreground">{area.desc}</p>
+                </div>
             ))}
           </div>
         </div>
