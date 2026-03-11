@@ -63,17 +63,17 @@ const Navbar = () => {
         >
           <nav className="section-container flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                <span className="font-display text-primary-foreground text-sm font-semibold leading-none">
+            <Link to="/" className={`flex items-center gap-3 group transition-colors duration-300`}>
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-105 ${scrolled ? "bg-primary" : "bg-white/20 backdrop-blur-sm"}`}>
+                <span className="font-display text-white text-sm font-semibold leading-none">
                   O
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-[15px] font-semibold text-foreground leading-tight">
+                <span className={`font-display text-[15px] font-semibold leading-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"}`}>
                   Oliveira
                 </span>
-                <span className="font-body text-[9px] tracking-[0.2em] uppercase text-muted-foreground leading-tight">
+                <span className={`font-body text-[9px] tracking-[0.2em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-white/60"}`}>
                   & Associados
                 </span>
               </div>
@@ -81,12 +81,16 @@ const Navbar = () => {
 
             {/* Desktop links */}
             <div className="hidden md:flex items-center">
-              <div className="flex items-center gap-0.5 bg-muted/40 rounded-full p-1">
+              <div className="flex items-center gap-0.5 rounded-full p-1">
                 {links.map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
-                    className="font-body text-[13px] text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-full hover:bg-background hover:shadow-sm transition-all duration-200"
+                    className={`font-body text-[13px] px-4 py-1.5 rounded-full transition-all duration-300 ${
+                      scrolled
+                        ? "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        : "text-white/70 hover:text-white hover:bg-white/10"
+                    }`}
                   >
                     {l.label}
                   </Link>
@@ -94,7 +98,11 @@ const Navbar = () => {
               </div>
               <Link
                 to="/#contato"
-                className="btn-primary text-[12px] px-5 py-2 ml-4"
+                className={`font-body text-[12px] font-medium tracking-wide px-5 py-2 ml-4 rounded-full inline-flex items-center gap-2 transition-all duration-300 ${
+                  scrolled
+                    ? "bg-primary text-primary-foreground hover:opacity-90"
+                    : "bg-white/15 text-white border border-white/25 hover:bg-white/25 backdrop-blur-sm"
+                }`}
               >
                 Consulta Gratuita
               </Link>
@@ -103,7 +111,9 @@ const Navbar = () => {
             {/* Mobile toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-muted/60 transition-colors"
+              className={`md:hidden relative w-10 h-10 flex items-center justify-center rounded-full transition-colors ${
+                scrolled ? "hover:bg-muted/60" : "hover:bg-white/10"
+              }`}
               aria-label="Menu"
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -115,7 +125,7 @@ const Navbar = () => {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <X size={20} className="text-foreground" />
+                    <X size={20} className={scrolled ? "text-foreground" : "text-white"} />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -125,7 +135,7 @@ const Navbar = () => {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <Menu size={20} className="text-foreground" />
+                    <Menu size={20} className={scrolled ? "text-foreground" : "text-white"} />
                   </motion.div>
                 )}
               </AnimatePresence>
