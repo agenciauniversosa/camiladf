@@ -54,7 +54,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(75,30%,8%)] via-transparent to-transparent" />
         </motion.div>
 
-        <motion.div style={{ opacity: heroOpacity }} className="relative z-10 h-full flex items-end section-container pb-16 md:pb-24">
+        <motion.div style={{ opacity: heroOpacity }} className="relative z-10 h-full flex items-center section-container pb-0 md:pb-0 pt-16">
           <motion.div
             className="max-w-2xl"
             variants={heroTextVariants}
