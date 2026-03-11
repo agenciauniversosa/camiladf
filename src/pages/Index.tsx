@@ -46,8 +46,8 @@ const Index = () => {
       <section ref={heroRef} className="relative h-[100vh] min-h-[600px] overflow-hidden">
         <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
           <img src={heroImage} alt="Escritório" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(75,30%,8%)]/80 via-[hsl(75,30%,8%)]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(75,30%,8%)] via-transparent to-transparent" />
         </motion.div>
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 h-full flex items-end section-container pb-16 md:pb-24">
