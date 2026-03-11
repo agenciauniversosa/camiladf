@@ -1,23 +1,17 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
-  const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const lastScrollY = useRef(0);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
       setScrolled(currentY > 40);
-      if (currentY < 80) setVisible(true);
-      else if (currentY < lastScrollY.current) setVisible(true);
-      else setVisible(false);
-      lastScrollY.current = currentY;
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -35,9 +29,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          visible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50"
       >
         {/* Top bar — only visible before scroll */}
         <div
@@ -63,10 +55,10 @@ const Navbar = () => {
 
         {/* Main navbar */}
         <div
-          className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`transition-all duration-500 ${
             scrolled
-              ? "bg-background/95 backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.5)]"
-              : "bg-background/0"
+              ? "bg-background/60 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 shadow-[0_4px_30px_rgba(0,0,0,0.05)]"
+              : "bg-transparent"
           }`}
         >
           <nav className="section-container flex items-center justify-between h-16">
