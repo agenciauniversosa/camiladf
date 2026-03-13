@@ -119,10 +119,10 @@ const Index = () => {
               <Reveal delay={0.25}>
                 <div className="space-y-4">
                   <p className="body-md text-muted-foreground">
-                    Fundado em 2003, o escritório Oliveira & Associados nasceu da convicção de que cada demanda jurídica carrega uma história que precisa ser ouvida com atenção.
+                    Escritório boutique dedicado à atuação estratégica em Direito Penal Clássico. Sob uma atuação qualificada, busca-se construir soluções jurídicas consistentes em todas as instâncias, com ênfase em Tribunais Superiores.
                   </p>
                   <p className="body-md text-muted-foreground">
-                    A relação entre advogado e cliente deve ser construída sobre transparência e confiança mútua. Resultados duradouros nascem de uma compreensão profunda.
+                    Fundado e conduzido pela advogada Camila Caroline Dias Frazão, o escritório atua em todo o território nacional, oferecendo uma advocacia artesanal e customizada, pautada na análise individual de cada caso.
                   </p>
                 </div>
               </Reveal>
