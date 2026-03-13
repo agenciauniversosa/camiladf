@@ -37,7 +37,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Oliveira & Associados <onboarding@resend.dev>",
-        to: ["rcapella64@gmail.com"],
+        to: ["camila@diasfrazao.com.br"],
         subject: `[Contato Site] ${subject}`,
         html: htmlBody,
         reply_to: email,
