@@ -65,20 +65,12 @@ const Navbar = () => {
         >
           <nav className="section-container flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className={`flex items-center gap-3 group transition-colors duration-300`}>
-              <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-105 ${scrolled ? "bg-primary" : "bg-white/20 backdrop-blur-sm"}`}>
-                <span className="font-display text-white text-sm font-semibold leading-none">
-                  DF
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className={`font-display text-[15px] font-semibold leading-tight transition-colors duration-300 ${scrolled ? "text-gray-800" : "text-white"}`}>
-                  Dias Frazão
-                </span>
-                <span className={`font-body text-[9px] tracking-[0.2em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-gray-500" : "text-white/60"}`}>
-                  Advocacia
-                </span>
-              </div>
+            <Link to="/" className="flex items-center group transition-all duration-300">
+              <img
+                src={scrolled ? logoDark : logoLight}
+                alt="Dias Frazão Advocacia"
+                className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
+              />
             </Link>
 
             {/* Desktop links */}
