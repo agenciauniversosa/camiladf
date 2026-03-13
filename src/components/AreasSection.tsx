@@ -41,7 +41,7 @@ const AreasSection = () => (
         </Reveal>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {areas.map((area, i) => (
           <motion.div
             key={area.title}
