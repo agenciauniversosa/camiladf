@@ -145,9 +145,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══ EQUIPE ═══ */}
-      <TeamSection />
-
       {/* ═══ BLOG ═══ */}
       <section className="section-gap relative bg-card/60 backdrop-blur-sm">
         <div className="section-container">
