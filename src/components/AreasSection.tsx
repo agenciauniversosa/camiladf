@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Heart, Shield, Gavel } from "lucide-react";
+import { Scale, Gavel } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const areas = [
@@ -12,16 +12,6 @@ const areas = [
     title: "Indenização Civil",
     desc: "Busca de reparação justa por danos morais e materiais, com análise individualizada de cada caso.",
     icon: Scale,
-  },
-  {
-    title: "Direito de Família",
-    desc: "Divórcio, guarda, pensão alimentícia e inventário com sensibilidade e rigor técnico.",
-    icon: Heart,
-  },
-  {
-    title: "Defesa do Consumidor",
-    desc: "Proteção dos seus direitos nas relações de consumo, com atuação extrajudicial e judicial.",
-    icon: Shield,
   },
 ];
 
