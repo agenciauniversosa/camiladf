@@ -7,15 +7,15 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
           <Reveal>
-            <h3 className="font-display text-lg font-medium text-foreground mb-3">
-              Oliveira & Associados
+             <h3 className="font-display text-lg font-medium text-foreground mb-3">
+              Dias Frazão Advocacia
             </h3>
             <p className="body-sm text-muted-foreground max-w-sm mb-6">
-              Advocacia com compromisso, clareza e resultados. Há mais de 20 anos construindo relações de confiança.
+              Estratégia, técnica e defesa penal de alto nível. Atuação em todo o território nacional.
             </p>
             <p className="body-sm text-muted-foreground">
-              contato@oliveiraadvogados.com.br<br />
-              (11) 3000-0000
+              contato@diasfrazao.adv.br<br />
+              (11) 99999-9999
             </p>
           </Reveal>
         </div>
