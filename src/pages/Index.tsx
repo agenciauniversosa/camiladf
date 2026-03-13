@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
+import camilaImage from "@/assets/team/camila.png";
 import { blogPosts } from "@/lib/blogData";
 import BlogCard from "@/components/BlogCard";
 import Navbar from "@/components/Navbar";
@@ -103,14 +104,27 @@ const Index = () => {
       {/* ═══ SOBRE ═══ */}
       <section className="relative bg-card/60 backdrop-blur-sm">
         <div className="section-container section-gap">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal>
-              <div>
-                <p className="label-sm mb-3">Sobre o escritório</p>
-                <h2 className="heading-xl text-foreground mb-6">Advocacia <em className="font-normal">artesanal</em></h2>
+              <div className="relative">
+                <div className="aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)]">
+                  <img
+                    src={camilaImage}
+                    alt="Camila Caroline Dias Frazão - Advogada Criminalista"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 lg:right-auto lg:-left-4 bg-primary text-primary-foreground px-5 py-3 rounded-xl shadow-lg">
+                  <p className="font-display text-sm font-medium">Camila C. Dias Frazão</p>
+                  <p className="font-body text-[11px] opacity-80">Fundadora · OAB/SP</p>
+                </div>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center">
+              <Reveal delay={0.1}>
+                <p className="label-sm mb-3">Sobre o escritório</p>
+                <h2 className="heading-xl text-foreground mb-6">Advocacia <em className="font-normal">artesanal</em></h2>
+              </Reveal>
               <Reveal delay={0.15}>
                 <blockquote className="font-display text-xl md:text-2xl font-normal text-foreground/80 leading-relaxed mb-8 italic">
                   "Excelência técnica, confidencialidade e compromisso inegociável com a defesa de direitos e garantias fundamentais."
