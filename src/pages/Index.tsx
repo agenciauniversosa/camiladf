@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import heroImage from "@/assets/hero-law.jpg";
+import camilaImage from "@/assets/team/camila.png";
 import { blogPosts } from "@/lib/blogData";
 import BlogCard from "@/components/BlogCard";
 import Navbar from "@/components/Navbar";
