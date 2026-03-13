@@ -113,7 +113,7 @@ const Index = () => {
             <div className="flex flex-col justify-center">
               <Reveal delay={0.15}>
                 <blockquote className="font-display text-xl md:text-2xl font-normal text-foreground/80 leading-relaxed mb-8 italic">
-                  "Acreditamos que a advocacia deve ser exercida com rigor técnico e sensibilidade humana."
+                  "Excelência técnica, confidencialidade e compromisso inegociável com a defesa de direitos e garantias fundamentais."
                 </blockquote>
               </Reveal>
               <Reveal delay={0.25}>
