@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
+import logoDark from "@/assets/logo-dark.png";
 
 const Footer = () => (
   <footer className="border-t border-border">
