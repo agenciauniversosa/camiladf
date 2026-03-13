@@ -13,7 +13,7 @@ const Footer = () => (
               Estratégia, técnica e defesa penal de alto nível. Atuação em todo o território nacional.
             </p>
             <p className="body-sm text-muted-foreground">
-              contato@diasfrazao.adv.br<br />
+              camila@diasfrazao.com.br<br />
               (11) 99999-9999
             </p>
           </Reveal>
