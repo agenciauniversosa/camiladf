@@ -106,8 +106,8 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <Reveal>
               <div>
-                <p className="label-sm mb-3">Sobre nós</p>
-                <h2 className="heading-xl text-foreground mb-6">Advocacia com <em className="font-normal">propósito</em></h2>
+                <p className="label-sm mb-3">Sobre o escritório</p>
+                <h2 className="heading-xl text-foreground mb-6">Advocacia <em className="font-normal">artesanal</em></h2>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center">
