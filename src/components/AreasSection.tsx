@@ -3,12 +3,8 @@ import { Users, Briefcase, Building2, Shield, Receipt, Home } from "lucide-react
 import Reveal from "@/components/Reveal";
 
 const areas = [
-  { title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atenção personalizada.", icon: Users },
-  { title: "Direito Trabalhista", desc: "Defesa estratégica para empregadores e empregados com soluções negociadas.", icon: Briefcase },
-  { title: "Direito Empresarial", desc: "Assessoria societária, fusões, aquisições e governança corporativa.", icon: Building2 },
-  { title: "Direito Penal", desc: "Defesa criminal estratégica em todas as instâncias judiciais.", icon: Shield },
-  { title: "Direito Tributário", desc: "Planejamento fiscal, contencioso administrativo e judicial tributário.", icon: Receipt },
-  { title: "Direito Imobiliário", desc: "Transações, regularização fundiária e due diligence imobiliária.", icon: Home },
+  { title: "Direito Penal Clássico", desc: "Atuação estratégica em defesa criminal em todas as instâncias, com ênfase em Tribunais Superiores (STF e STJ).", icon: Shield },
+  { title: "Indenização Civil", desc: "Busca de reparação justa por danos morais e materiais, com análise individualizada de cada caso.", icon: Users },
 ];
 
 const itemVariants = {
