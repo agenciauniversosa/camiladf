@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
         <div className="md:col-span-5">
           <Reveal>
-            <img src={logoDark} alt="Dias Frazão Advocacia" className="h-12 w-auto mb-4" />
+            <img src={logoDark} alt="Dias Frazão Advocacia" className="h-16 w-auto mb-4" />
             <p className="body-sm text-muted-foreground max-w-sm mb-6">
               Estratégia, técnica e defesa penal de alto nível. Atuação em todo o território nacional.
             </p>
