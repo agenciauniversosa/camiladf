@@ -23,7 +23,6 @@ const Navbar = () => {
 
   const links = [
     { to: "/#areas", label: "Áreas" },
-    { to: "/#equipe", label: "Equipe" },
     { to: "/blog", label: "Blog" },
     { to: "/#contato", label: "Contato" },
   ];
