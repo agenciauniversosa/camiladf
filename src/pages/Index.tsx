@@ -62,14 +62,14 @@ const Index = () => {
             animate="visible"
           >
             <motion.p variants={heroChildVariants} className="label-sm text-white/60 mb-5">
-              Advocacia · São Paulo · Desde 2003
+              Dias Frazão Advocacia · Atuação Nacional
             </motion.p>
             <motion.h1 variants={heroChildVariants} className="heading-xl text-white mb-6">
-              Direito com
-              <em className="font-normal"> substância</em>
+              Estratégia, técnica e
+              <em className="font-normal"> defesa penal de alto nível</em>
             </motion.h1>
             <motion.p variants={heroChildVariants} className="body-md text-white/70 max-w-sm mb-8">
-              Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
+              Advocacia artesanal e customizada em Direito Penal Clássico, com ênfase em Tribunais Superiores.
             </motion.p>
             <motion.div variants={heroChildVariants} className="flex gap-3">
               <Link to="/#contato" className="btn-primary group">
