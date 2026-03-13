@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Heart, Shield, Gavel } from "lucide-react";
+import { Scale, Gavel } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const areas = [
@@ -12,16 +12,6 @@ const areas = [
     title: "Indenização Civil",
     desc: "Busca de reparação justa por danos morais e materiais, com análise individualizada de cada caso.",
     icon: Scale,
-  },
-  {
-    title: "Direito de Família",
-    desc: "Divórcio, guarda, pensão alimentícia e inventário com sensibilidade e rigor técnico.",
-    icon: Heart,
-  },
-  {
-    title: "Defesa do Consumidor",
-    desc: "Proteção dos seus direitos nas relações de consumo, com atuação extrajudicial e judicial.",
-    icon: Shield,
   },
 ];
 
@@ -51,7 +41,7 @@ const AreasSection = () => (
         </Reveal>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {areas.map((area, i) => (
           <motion.div
             key={area.title}
