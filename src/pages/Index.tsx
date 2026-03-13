@@ -10,8 +10,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import ContactSection from "@/components/ContactSection";
-import TeamSection from "@/components/TeamSection";
 import AreasSection from "@/components/AreasSection";
+
 import StatsBar from "@/components/StatsBar";
 
 const Index = () => {
@@ -144,9 +144,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* ═══ EQUIPE ═══ */}
-      <TeamSection />
 
       {/* ═══ BLOG ═══ */}
       <section className="section-gap relative bg-card/60 backdrop-blur-sm">
