@@ -62,14 +62,14 @@ const Index = () => {
             animate="visible"
           >
             <motion.p variants={heroChildVariants} className="label-sm text-white/60 mb-5">
-              Advocacia · São Paulo · Desde 2003
+              Dias Frazão Advocacia · Atuação Nacional
             </motion.p>
             <motion.h1 variants={heroChildVariants} className="heading-xl text-white mb-6">
-              Direito com
-              <em className="font-normal"> substância</em>
+              Estratégia, técnica e
+              <em className="font-normal"> defesa penal de alto nível</em>
             </motion.h1>
             <motion.p variants={heroChildVariants} className="body-md text-white/70 max-w-sm mb-8">
-              Transformamos complexidade jurídica em soluções claras e resultados concretos há mais de duas décadas.
+              Advocacia artesanal e customizada em Direito Penal Clássico, com ênfase em Tribunais Superiores.
             </motion.p>
             <motion.div variants={heroChildVariants} className="flex gap-3">
               <Link to="/#contato" className="btn-primary group">
@@ -106,23 +106,23 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <Reveal>
               <div>
-                <p className="label-sm mb-3">Sobre nós</p>
-                <h2 className="heading-xl text-foreground mb-6">Advocacia com <em className="font-normal">propósito</em></h2>
+                <p className="label-sm mb-3">Sobre o escritório</p>
+                <h2 className="heading-xl text-foreground mb-6">Advocacia <em className="font-normal">artesanal</em></h2>
               </div>
             </Reveal>
             <div className="flex flex-col justify-center">
               <Reveal delay={0.15}>
                 <blockquote className="font-display text-xl md:text-2xl font-normal text-foreground/80 leading-relaxed mb-8 italic">
-                  "Acreditamos que a advocacia deve ser exercida com rigor técnico e sensibilidade humana."
+                  "Excelência técnica, confidencialidade e compromisso inegociável com a defesa de direitos e garantias fundamentais."
                 </blockquote>
               </Reveal>
               <Reveal delay={0.25}>
                 <div className="space-y-4">
                   <p className="body-md text-muted-foreground">
-                    Fundado em 2003, o escritório Oliveira & Associados nasceu da convicção de que cada demanda jurídica carrega uma história que precisa ser ouvida com atenção.
+                    Escritório boutique dedicado à atuação estratégica em Direito Penal Clássico. Sob uma atuação qualificada, busca-se construir soluções jurídicas consistentes em todas as instâncias, com ênfase em Tribunais Superiores.
                   </p>
                   <p className="body-md text-muted-foreground">
-                    A relação entre advogado e cliente deve ser construída sobre transparência e confiança mútua. Resultados duradouros nascem de uma compreensão profunda.
+                    Fundado e conduzido pela advogada Camila Caroline Dias Frazão, o escritório atua em todo o território nacional, oferecendo uma advocacia artesanal e customizada, pautada na análise individual de cada caso.
                   </p>
                 </div>
               </Reveal>
