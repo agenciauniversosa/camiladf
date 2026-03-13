@@ -6,10 +6,7 @@ import advogada4 from "@/assets/team/advogada-4.jpg";
 import Reveal from "@/components/Reveal";
 
 const team = [
-  { name: "Ricardo Oliveira", role: "Sócio Fundador", specialty: "Direito Empresarial · Tributário", bio: "Mais de 25 anos de experiência em assessoria societária e planejamento tributário.", image: advogado1, oab: "OAB/SP 123.456" },
-  { name: "Mariana Costa", role: "Sócia", specialty: "Direito Civil · Família e Sucessões", bio: "Especialista em planejamento sucessório com foco em mediação.", image: advogada2, oab: "OAB/SP 189.012" },
-  { name: "Lucas Andrade", role: "Associado Sênior", specialty: "Direito Penal · Digital", bio: "Defesa criminal com foco em crimes cibernéticos. Mestre pela USP.", image: advogado3, oab: "OAB/SP 234.567" },
-  { name: "Camila Ferreira", role: "Associada", specialty: "Direito Trabalhista · Imobiliário", bio: "Contencioso trabalhista e transações imobiliárias.", image: advogada4, oab: "OAB/SP 301.234" },
+  { name: "Camila Caroline Dias Frazão", role: "Fundadora", specialty: "Direito Penal Clássico · Tribunais Superiores", bio: "Advogada criminalista com atuação estratégica em todas as instâncias, dedicada à defesa de direitos e garantias fundamentais.", image: advogada2, oab: "OAB/SP" },
 ];
 
 const cardVariants = {

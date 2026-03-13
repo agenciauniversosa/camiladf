@@ -55,7 +55,7 @@ const Footer = () => (
       <Reveal>
         <div className="border-t border-border mt-14 pt-6">
           <p className="font-body text-[11px] text-muted-foreground/60">
-            © {new Date().getFullYear()} Oliveira & Associados. Todos os direitos reservados.
+            © {new Date().getFullYear()} Dias Frazão Advocacia. Todos os direitos reservados.
           </p>
         </div>
       </Reveal>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, Briefcase, Building2, Shield, Receipt, Home } from "lucide-react";
+import { Users, Shield } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const areas = [
