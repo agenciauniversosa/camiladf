@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import Reveal from "@/components/Reveal";
 
 const stats = [
-  { value: 20, suffix: "+", label: "anos de atuação" },
+  { value: 12, suffix: "+", label: "anos de atuação" },
   { value: 500, suffix: "+", label: "clientes atendidos" },
   { value: 98, suffix: "%", label: "de satisfação" },
 ];
