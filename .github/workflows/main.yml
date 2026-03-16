@@ -1,3 +1,8 @@
+‎.github/workflows/main.yml‎
++25
+Lines changed: 25 additions & 0 deletions
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,25 @@
 name: Deploy via FTP (Locaweb)
 on:
   push:
