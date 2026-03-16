@@ -1,21 +1,16 @@
-@@ -0,0 +1,24 @@
-name: Deploy via FTP
-
+name: Deploy via FTP (Locaweb)
 on:
   push:
     branches: [ main ]
-
 jobs:
   web-deploy:
     name: Deploy
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-
-      - name: FTP-Deploy
+      - name: FTP-Deploy to Locaweb
         uses: locaweb/ftp-deploy@1.0.0
         with:
           host: ${{ secrets.HOST }}
@@ -23,3 +18,4 @@ jobs:
           password: ${{ secrets.PASS }}
           remoteDir: public_html/
           localDir: html-version/
+          forceSsl: false
