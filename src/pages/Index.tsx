@@ -56,7 +56,7 @@ const Index = () => {
             className="w-full h-full object-cover"
             initial={{ scale: 1, x: 0 }}
             animate={{ scale: 1.12, x: -30 }}
-            transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+            transition={{ duration: 12, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(75,30%,8%)]/80 via-[hsl(75,30%,8%)]/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(75,30%,8%)] via-transparent to-transparent" />
