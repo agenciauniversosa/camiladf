@@ -3,7 +3,7 @@ import camilaImage from "@/assets/team/camila.png";
 import Reveal from "@/components/Reveal";
 
 const team = [
-  { name: "Camila Caroline Dias Frazão", role: "Fundadora", specialty: "Direito Penal Clássico · Tribunais Superiores", bio: "Advogada criminalista com atuação estratégica em todas as instâncias, dedicada à defesa de direitos e garantias fundamentais.", image: camilaImage, oab: "OAB/SP" },
+  { name: "Camila Caroline Dias Frazão", role: "Fundadora", specialty: "Direito Penal Clássico · Tribunais Superiores", bio: "Advogada criminalista com atuação estratégica em todas as instâncias, dedicada à defesa de direitos e garantias fundamentais.", image: camilaImage, oab: "OAB/DF 71.545" },
 ];
 
 const cardVariants = {
