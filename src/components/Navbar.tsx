@@ -9,6 +9,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
+  const solid = !isHome || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
