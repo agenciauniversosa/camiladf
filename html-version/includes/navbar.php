@@ -13,6 +13,7 @@
         </a>
 
         <div class="nav-links transparent">
+          <a href="index.php">Página Inicial</a>
           <a href="index.php#areas">Áreas</a>
           <a href="blog.php">Blog</a>
           <a href="index.php#contato">Contato</a>
@@ -26,6 +27,7 @@
     </div>
 
     <div class="mobile-menu">
+      <a href="index.php" class="mobile-link">Página Inicial</a>
       <a href="index.php#areas" class="mobile-link">Áreas</a>
       <a href="blog.php" class="mobile-link">Blog</a>
       <a href="index.php#contato" class="mobile-link">Contato</a>
