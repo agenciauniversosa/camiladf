@@ -38,7 +38,7 @@ const Navbar = () => {
         {/* Top bar — only visible before scroll */}
         <div
           className={`overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            scrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"
+            solid ? "max-h-0 opacity-0" : "max-h-10 opacity-100"
           }`}
         >
           <div className="bg-primary text-primary-foreground">
@@ -53,7 +53,7 @@ const Navbar = () => {
         {/* Main navbar */}
         <div
           className={`transition-all duration-500 ${
-            scrolled
+            solid
               ? "bg-white/95 backdrop-blur-xl backdrop-saturate-150 border-b border-border/30 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
               : "bg-transparent"
           }`}
@@ -62,7 +62,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center group transition-all duration-300">
               <img
-                src={scrolled ? logoDark : logoLight}
+                src={solid ? logoDark : logoLight}
                 alt="Dias Frazão Advocacia"
                 className="h-14 w-auto transition-all duration-300 group-hover:scale-105"
               />
@@ -76,7 +76,7 @@ const Navbar = () => {
                     key={l.to}
                     to={l.to}
                     className={`font-body text-[13px] px-4 py-1.5 rounded-full transition-all duration-300 ${
-                      scrolled
+                      solid
                         ? "text-gray-500 hover:text-gray-900 hover:bg-gray-100/60"
                         : "text-white/70 hover:text-white hover:bg-white/10"
                     }`}
@@ -88,7 +88,7 @@ const Navbar = () => {
               <Link
                 to="/#contato"
                 className={`font-body text-[12px] font-medium tracking-wide px-5 py-2 ml-4 rounded-full inline-flex items-center gap-2 transition-all duration-300 ${
-                  scrolled
+                  solid
                     ? "bg-primary text-primary-foreground hover:opacity-90"
                     : "bg-white/15 text-white border border-white/25 hover:bg-white/25 backdrop-blur-sm"
                 }`}
@@ -101,7 +101,7 @@ const Navbar = () => {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className={`md:hidden relative w-10 h-10 flex items-center justify-center rounded-full transition-colors ${
-                scrolled ? "hover:bg-muted/60" : "hover:bg-white/10"
+                solid ? "hover:bg-muted/60" : "hover:bg-white/10"
               }`}
               aria-label="Menu"
             >
@@ -114,7 +114,7 @@ const Navbar = () => {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <X size={20} className={scrolled ? "text-gray-800" : "text-white"} />
+                    <X size={20} className={solid ? "text-gray-800" : "text-white"} />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -124,7 +124,7 @@ const Navbar = () => {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <Menu size={20} className={scrolled ? "text-gray-800" : "text-white"} />
+                    <Menu size={20} className={solid ? "text-gray-800" : "text-white"} />
                   </motion.div>
                 )}
               </AnimatePresence>
