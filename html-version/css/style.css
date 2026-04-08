@@ -208,8 +208,8 @@ input, textarea { font-family: inherit; }
 }
 .nav-links.transparent a { color: rgba(255,255,255,0.7); }
 .nav-links.transparent a:hover { color: #fff; background: rgba(255,255,255,0.1); }
-.nav-links.scrolled a { color: #6b7280; }
-.nav-links.scrolled a:hover { color: #111827; background: hsl(var(--muted) / 0.6); }
+.nav-links.scrolled a { color: hsl(var(--foreground) / 0.6); }
+.nav-links.scrolled a:hover { color: hsl(var(--foreground)); background: hsl(var(--muted) / 0.6); }
 
 .nav-cta {
   font-family: var(--font-body);

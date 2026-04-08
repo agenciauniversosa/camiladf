@@ -7,33 +7,37 @@ const navCta = document.querySelector('.nav-cta');
 const navLogo = document.getElementById('nav-logo');
 const mobileToggle = document.querySelector('.mobile-toggle');
 
+// Detect if we're on the home page
+const isHome = window.location.pathname === '/' || window.location.pathname.endsWith('index.php') || window.location.pathname.endsWith('/');
+
 function updateNavbar() {
   const scrolled = window.scrollY > 40;
+  const solid = !isHome || scrolled;
   
-  if (topBar) topBar.classList.toggle('hidden', scrolled);
-  if (mainNav) mainNav.classList.toggle('scrolled', scrolled);
+  if (topBar) topBar.classList.toggle('hidden', solid);
+  if (mainNav) mainNav.classList.toggle('scrolled', solid);
   
   if (navLinks) {
-    navLinks.classList.toggle('transparent', !scrolled);
-    navLinks.classList.toggle('scrolled', scrolled);
+    navLinks.classList.toggle('transparent', !solid);
+    navLinks.classList.toggle('scrolled', solid);
   }
   if (navCta) {
-    navCta.classList.toggle('transparent', !scrolled);
-    navCta.classList.toggle('scrolled', scrolled);
+    navCta.classList.toggle('transparent', !solid);
+    navCta.classList.toggle('scrolled', solid);
   }
   if (mobileToggle) {
-    mobileToggle.classList.toggle('scrolled', scrolled);
+    mobileToggle.classList.toggle('scrolled', solid);
   }
   
   // Swap logo
   if (navLogo) {
-    navLogo.src = scrolled ? 'images/logo-dark.png' : 'images/logo-light.png';
+    navLogo.src = solid ? 'images/logo-dark.png' : 'images/logo-light.png';
   }
   
   // Mobile toggle icon color
   if (mobileToggle) {
     const svg = mobileToggle.querySelector('svg');
-    if (svg) svg.style.color = scrolled ? '#1f2937' : '#fff';
+    if (svg) svg.style.color = solid ? 'hsl(var(--foreground))' : '#fff';
   }
 }
 
