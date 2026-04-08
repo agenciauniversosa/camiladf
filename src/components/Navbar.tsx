@@ -22,6 +22,7 @@ const Navbar = () => {
   useEffect(() => setMobileOpen(false), [location]);
 
   const links = [
+    { to: "/", label: "Página Inicial" },
     { to: "/#areas", label: "Áreas" },
     { to: "/blog", label: "Blog" },
     { to: "/#contato", label: "Contato" },
