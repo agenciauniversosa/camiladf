@@ -21,6 +21,9 @@ const Navbar = () => {
 
   useEffect(() => setMobileOpen(false), [location]);
 
+  const isHome = location.pathname === "/";
+  const solid = !isHome || scrolled;
+
   const links = [
     { to: "/", label: "Página Inicial" },
     { to: "/#areas", label: "Áreas" },
