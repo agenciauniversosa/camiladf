@@ -94,7 +94,7 @@ const ContactSection = () => {
               </div>
               <div className="space-y-2 body-sm text-primary-foreground/40">
                 <p>Av. Paulista, 1000 — 15º andar</p>
-                <p>São Paulo — SP, 01310-100</p>
+                
                 <p className="mt-3">camila@diasfrazao.com.br</p>
                 
               </div>
