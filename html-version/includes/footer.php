@@ -19,14 +19,6 @@
           </ul>
         </div>
 
-        <div class="footer-address reveal" data-delay="0.2">
-          <p class="label-sm">Endereço</p>
-          <p>
-            Av. Paulista, 1000<br>
-            15º andar — São Paulo, SP<br>
-            01310-100
-          </p>
-        </div>
       </div>
 
       <div class="footer-bottom reveal">
