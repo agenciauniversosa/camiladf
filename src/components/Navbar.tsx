@@ -40,13 +40,6 @@ const Navbar = () => {
         >
           <div className="bg-primary text-primary-foreground">
             <div className="section-container flex items-center justify-end h-9 gap-6">
-              <a
-                href="tel:+5511999999999"
-                className="font-body text-[11px] tracking-wide flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity"
-              >
-                <Phone size={11} />
-                (11) 99999-9999
-              </a>
               <span className="font-body text-[11px] tracking-wide opacity-60 hidden sm:inline">
                 Seg–Sex · 9h às 18h
               </span>
