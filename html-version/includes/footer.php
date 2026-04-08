@@ -6,8 +6,7 @@
           <img src="images/logo-dark.png" alt="Dias Frazão Advocacia">
           <p class="desc body-sm">Estratégia, técnica e defesa penal de alto nível. Atuação em todo o território nacional.</p>
           <p class="contact-info-footer body-sm">
-            camila@diasfrazao.com.br<br>
-            (11) 99999-9999
+            camila@diasfrazao.com.br
           </p>
         </div>
 

@@ -39,7 +39,7 @@ include 'includes/navbar.php';
       <div class="stats-card reveal">
         <div class="stats-grid">
           <div class="stat-item">
-            <span class="stat-value counter" data-target="20" data-suffix="+">0</span>
+            <span class="stat-value counter" data-target="12" data-suffix="+">0</span>
             <p class="stat-label">anos de atuação</p>
           </div>
           <div class="stat-item">
@@ -202,7 +202,7 @@ include 'includes/navbar.php';
             <p>Av. Paulista, 1000 — 15º andar</p>
             <p>São Paulo — SP, 01310-100</p>
             <p class="email-line">camila@diasfrazao.com.br</p>
-            <p>(11) 3000-0000</p>
+            
           </div>
         </div>
 
