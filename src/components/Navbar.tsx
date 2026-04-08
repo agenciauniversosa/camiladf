@@ -9,8 +9,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
-  const solid = !isHome || scrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +20,9 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => setMobileOpen(false), [location]);
+
+  const isHome = location.pathname === "/";
+  const solid = !isHome || scrolled;
 
   const links = [
     { to: "/", label: "Página Inicial" },
@@ -77,7 +78,7 @@ const Navbar = () => {
                     to={l.to}
                     className={`font-body text-[13px] px-4 py-1.5 rounded-full transition-all duration-300 ${
                       solid
-                        ? "text-gray-500 hover:text-gray-900 hover:bg-gray-100/60"
+                        ? "text-foreground/60 hover:text-foreground hover:bg-muted/60"
                         : "text-white/70 hover:text-white hover:bg-white/10"
                     }`}
                   >
@@ -114,7 +115,7 @@ const Navbar = () => {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <X size={20} className={solid ? "text-gray-800" : "text-white"} />
+                    <X size={20} className={solid ? "text-foreground" : "text-white"} />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -124,7 +125,7 @@ const Navbar = () => {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.15 }}
                   >
-                    <Menu size={20} className={solid ? "text-gray-800" : "text-white"} />
+                    <Menu size={20} className={solid ? "text-foreground" : "text-white"} />
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -75,7 +75,7 @@ const ContactSection = () => {
   };
 
   const inputCls =
-    "w-full bg-primary-foreground/10 border border-primary-foreground/10 rounded-lg px-4 py-3.5 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-primary-foreground/20 transition-all";
+    "w-full bg-muted/50 rounded-lg px-4 py-3.5 font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/30 transition-all";
 
   return (
     <section id="contato" className="section-gap bg-primary text-primary-foreground">
