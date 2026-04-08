@@ -38,16 +38,6 @@ const Footer = () => (
           </Reveal>
         </div>
 
-        <div className="md:col-span-3">
-          <Reveal delay={0.2}>
-            <p className="label-sm mb-4">Endereço</p>
-            <p className="body-sm text-muted-foreground">
-              Av. Paulista, 1000<br />
-              15º andar — São Paulo, SP<br />
-              01310-100
-            </p>
-          </Reveal>
-        </div>
       </div>
 
       <Reveal>
