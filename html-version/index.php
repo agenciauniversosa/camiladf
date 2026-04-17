@@ -199,10 +199,8 @@ include 'includes/navbar.php';
             <p class="heading-desc body-md">Preencha o formulário e nossa equipe entrará em contato em até 24 horas úteis.</p>
           </div>
           <div class="contact-details body-sm">
-            <p>Av. Paulista, 1000 — 15º andar</p>
-            <p>São Paulo — SP, 01310-100</p>
             <p class="email-line">camila@diasfrazao.com.br</p>
-            
+            <p>(61) 98159-0908</p>
           </div>
         </div>
 
