@@ -170,19 +170,19 @@ const Index = () => {
             </Reveal>
           </div>
 
-          <BlogCard post={blogPosts[0]} featured />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {blogPosts.slice(1, 4).map((post, i) =>
-              <BlogCard key={post.id} post={post} index={i} />
-            )}
-          </div>
-
-          <div className="mt-10">
-            {blogPosts.slice(4, 6).map((post, i) =>
-              <BlogCard key={post.id} post={post} variant="compact" index={i} />
-            )}
-          </div>
+          {(() => {
+            const recent = [...blogPosts].slice(-4).reverse();
+            return (
+              <>
+                <BlogCard post={recent[0]} featured />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                  {recent.slice(1, 4).map((post, i) => (
+                    <BlogCard key={post.id} post={post} index={i} />
+                  ))}
+                </div>
+              </>
+            );
+          })()}
 
           <div className="mt-8 text-center md:hidden">
             <Link to="/blog" className="btn-outline text-[12px] px-5 py-2">
