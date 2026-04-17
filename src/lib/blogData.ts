@@ -28,24 +28,6 @@ export const categories = [
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "4",
-    title: "Indenização por Erro Médico: Como Buscar Reparação",
-    excerpt: "Entenda quando o erro médico gera direito à indenização e quais provas são necessárias para obter a reparação judicial.",
-    category: "Indenização Civil",
-    date: "18 Fev 2026",
-    readTime: "7 min",
-    slug: "indenizacao-erro-medico",
-    image: blog4,
-    content: [
-      "O erro médico é uma das situações mais delicadas no campo da responsabilidade civil. Quando um profissional de saúde causa dano ao paciente por imperícia, imprudência ou negligência, surge o dever de indenizar. A responsabilidade do médico é subjetiva, ou seja, é necessário comprovar a culpa do profissional.",
-      "A prova do erro médico geralmente exige perícia técnica realizada por profissional da mesma especialidade. O laudo pericial é peça fundamental para demonstrar que o dano sofrido decorreu da conduta inadequada do médico, e não de uma complicação inerente ao procedimento realizado.",
-      "É importante distinguir entre obrigação de meio e obrigação de resultado. Na maioria das especialidades médicas, o profissional se obriga a empregar os melhores meios disponíveis, sem garantir o resultado. Já em procedimentos estéticos, a jurisprudência tende a reconhecer a obrigação de resultado, facilitando a responsabilização.",
-      "Os hospitais e clínicas respondem objetivamente pelos danos causados por seus profissionais, conforme o Código de Defesa do Consumidor. Isso significa que basta comprovar o dano e o nexo causal, sem necessidade de demonstrar culpa da instituição — o que pode ser estrategicamente vantajoso para o paciente.",
-      "As indenizações em casos de erro médico podem incluir danos morais, danos estéticos, lucros cessantes e pensão vitalícia em casos de incapacidade permanente. O valor varia conforme a gravidade do dano, podendo alcançar cifras significativas.",
-      "Recomendamos que o paciente preserve toda a documentação médica — prontuários, exames, receitas e laudos — e procure orientação jurídica o quanto antes. O prazo prescricional é de 5 anos nas relações de consumo.",
-    ],
-  },
-  {
     id: "5",
     title: "Tribunal do Júri: Como Funciona a Defesa Criminal",
     excerpt: "Conheça o funcionamento do Tribunal do Júri no Brasil e as estratégias de defesa nos crimes dolosos contra a vida.",
