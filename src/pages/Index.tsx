@@ -123,7 +123,7 @@ const Index = () => {
                 </div>
                 <div className="absolute -bottom-4 -right-4 lg:right-auto lg:-left-4 bg-primary text-primary-foreground px-5 py-3 rounded-xl shadow-lg">
                   <p className="font-display text-sm font-medium">Camila C. Dias Frazão</p>
-                  <p className="font-body text-[11px] opacity-80">Fundadora · OAB/DF 71.545</p>
+                  <p className="font-body text-[11px] opacity-80">OAB/DF 71.545</p>
                 </div>
               </div>
             </Reveal>
