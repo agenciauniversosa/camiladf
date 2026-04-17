@@ -5,6 +5,7 @@ import blog4 from "@/assets/blog/blog-4.jpg";
 import blog5 from "@/assets/blog/blog-5.jpg";
 import blog6 from "@/assets/blog/blog-6.jpg";
 import blog7 from "@/assets/blog/blog-7.jpg";
+import blog8 from "@/assets/blog/blog-8.jpg";
 
 export interface BlogPost {
   id: string;
@@ -170,6 +171,25 @@ export const blogPosts: BlogPost[] = [
       "O HC 939358/DF é um precedente valioso porque evidencia que o processo penal não pode ser interpretado de forma indiferente à proteção da infância, à maternidade e à dignidade da pessoa presa. Ao superar a Súmula 691 e conceder prisão domiciliar à paciente gestante e mãe de duas crianças, o STJ reafirmou que a legalidade da prisão cautelar deve ser controlada com rigor, especialmente quando a permanência no cárcere contraria norma legal expressa e orientação consolidada do Supremo Tribunal Federal.",
       "Para além do caso concreto, a decisão serve de alerta: onde houver motivação padronizada, presunções desfavoráveis automáticas ou resistência indevida à aplicação do art. 318-A do CPP, caberá à defesa demonstrar que não se trata de mera divergência interpretativa, mas de efetivo constrangimento ilegal, apto a justificar a atuação corretiva dos tribunais superiores.",
       "VIDE: Superior Tribunal de Justiça. HC 939358/DF, Rel. Ministro Otávio de Almeida Toledo (Desembargador convocado do TJSP)",
+    ],
+  },
+  {
+    id: "8",
+    title: "Da incompatibilidade entre a prisão preventiva e o regime inicial semiaberto: verdadeira antecipação de pena",
+    excerpt: "Por que manter a prisão cautelar quando a sentença fixa regime semiaberto configura constrangimento ilegal e execução antecipada da pena.",
+    category: "Direito Penal",
+    date: "17 Abr 2026",
+    readTime: "6 min",
+    slug: "prisao-preventiva-regime-semiaberto-antecipacao-pena",
+    image: blog8,
+    content: [
+      "A manutenção da prisão preventiva revela-se manifestamente incompatível com a sentença condenatória que fixou o regime inicial semiaberto para cumprimento da pena. Isso porque, ao manter a segregação cautelar em cenário no qual o próprio título condenatório reconhece não ser cabível o regime fechado como resposta penal inicial, o Estado impõe à acusada restrição mais severa do que aquela definida no édito condenatório.",
+      "O Supremo Tribunal Federal tem entendimento consolidado no sentido de que, como regra, é incompatível a imposição ou manutenção da prisão preventiva quando o réu foi condenado a pena a ser cumprida em regime diverso do fechado, pois isso implica, cautelarmente, punição mais gravosa do que a decorrente do próprio título condenatório.",
+      "Mais do que isso, a tentativa de \"compatibilizar\" a prisão cautelar com o regime fixado na condenação não encontra previsão legal e acaba por chancelar o cumprimento antecipado da pena, em desrespeito ao entendimento consolidado da Suprema Corte.",
+      "A manutenção da custódia traduz verdadeiro constrangimento ilegal, justamente porque impõe, de forma cautelar, regime mais severo que o semiaberto fixado no título condenatório. Em outras palavras, a prisão preventiva deixa de servir à sua natureza instrumental e passa, indevidamente, a funcionar como execução antecipada da reprimenda em regime fechado, o que é juridicamente inadmissível.",
+      "Se o próprio Estado-juiz, ao individualizar a pena, concluiu que o caso não exige regime fechado para o início do cumprimento da sanção, não há coerência nem legalidade em conservar a prisão preventiva em moldes que, na prática, produzem efeito mais severo do que a condenação.",
+      "Por isso, a solução juridicamente adequada é a revogação da prisão preventiva, com eventual substituição por medidas cautelares diversas, nos termos do art. 319 do CPP, caso o juízo entenda necessário resguardar o processo.",
+      "VIDE: HC 248.753/DF, MIN. REL DIAS TOFFOLI (STF)",
     ],
   },
 ];
