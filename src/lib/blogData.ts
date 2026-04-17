@@ -6,6 +6,7 @@ import blog5 from "@/assets/blog/blog-5.jpg";
 import blog6 from "@/assets/blog/blog-6.jpg";
 import blog7 from "@/assets/blog/blog-7.jpg";
 import blog8 from "@/assets/blog/blog-8.jpg";
+import blog9 from "@/assets/blog/blog-9.jpg";
 
 export interface BlogPost {
   id: string;
@@ -190,6 +191,31 @@ export const blogPosts: BlogPost[] = [
       "Se o próprio Estado-juiz, ao individualizar a pena, concluiu que o caso não exige regime fechado para o início do cumprimento da sanção, não há coerência nem legalidade em conservar a prisão preventiva em moldes que, na prática, produzem efeito mais severo do que a condenação.",
       "Por isso, a solução juridicamente adequada é a revogação da prisão preventiva, com eventual substituição por medidas cautelares diversas, nos termos do art. 319 do CPP, caso o juízo entenda necessário resguardar o processo.",
       "VIDE: HC 248.753/DF, MIN. REL DIAS TOFFOLI (STF)",
+    ],
+  },
+  {
+    id: "9",
+    title: "Justa causa da ação penal e trancamento por provas ilícitas",
+    excerpt: "Como a ilicitude probatória compromete a justa causa e autoriza o trancamento da ação penal pela via do habeas corpus.",
+    category: "Direito Penal",
+    date: "17 Abr 2026",
+    readTime: "8 min",
+    slug: "justa-causa-trancamento-acao-penal-provas-ilicitas",
+    image: blog9,
+    content: [
+      "A justa causa constitui requisito essencial para o exercício válido da ação penal, funcionando como verdadeiro filtro de admissibilidade material da persecução criminal. Não se trata apenas da presença formal de indícios, mas da existência de um suporte probatório mínimo, lícito e idôneo, capaz de sustentar a imputação penal em juízo.",
+      "No processo penal constitucional, a justa causa está diretamente vinculada à licitude das provas. Isso significa que não basta haver elementos que indiquem autoria e materialidade — é imprescindível que esses elementos tenham sido obtidos por meios compatíveis com a Constituição e com o ordenamento jurídico.",
+      "Quando a acusação se estrutura a partir de provas ilícitas, ocorre uma ruptura na própria base de validade da ação penal. A prova ilícita, além de ser inadmissível (art. 5º, LVI, da Constituição), contamina todos os elementos dela derivados, conforme a teoria dos frutos da árvore envenenada.",
+      "Nesse cenário, a análise da justa causa deixa de ser meramente quantitativa e passa a ser qualitativa: excluídas as provas ilícitas e suas derivações, remanesce algum elemento probatório autônomo capaz de sustentar a acusação? Se a resposta for negativa, não há justa causa, e a ação penal não pode prosseguir.",
+      "O Superior Tribunal de Justiça tem reiteradamente afirmado que a descoberta posterior de elementos incriminadores não convalida a ilegalidade da diligência originária. O controle judicial deve se basear nos elementos existentes antes da medida invasiva, e não nos seus resultados.",
+      "A ausência de fundadas razões para ingresso domiciliar, a invalidação de eventual consentimento e a inexistência de urgência configuram vícios que tornam ilícita a prova obtida. Uma vez reconhecida essa ilicitude, deve-se analisar o impacto no conjunto probatório.",
+      "Se toda a prova da materialidade e autoria deriva da diligência ilegal, o processo perde sua sustentação jurídica. Não se trata apenas de anular um ato específico, mas de reconhecer que a ação penal como um todo carece de justa causa.",
+      "Nesses casos, a medida adequada é o trancamento da ação penal, especialmente pela via do habeas corpus. O trancamento representa o reconhecimento judicial de que o processo não pode prosseguir, seja por ausência de justa causa, seja por ilegalidade manifesta.",
+      "É importante diferenciar o trancamento da ação penal do arquivamento. O arquivamento ocorre na fase investigativa, antes do oferecimento da denúncia. Já o trancamento incide quando a ação penal já foi instaurada, mas se revela juridicamente inviável.",
+      "O trancamento por provas ilícitas reafirma a função contramajoritária do processo penal: impedir que o Estado, mesmo diante de suspeitas de criminalidade, viole direitos fundamentais para produzir prova e sustentar acusações.",
+      "Do ponto de vista estratégico, a defesa deve demonstrar não apenas a ilicitude da prova, mas também a inexistência de fontes independentes e autônomas que possam sustentar a acusação. A ausência desse suporte implica o reconhecimento da falta de justa causa.",
+      "Em síntese, não há ação penal legítima sem justa causa, e não há justa causa quando a acusação se fundamenta em provas ilícitas. Nesses casos, o ordenamento jurídico impõe o trancamento da ação penal como forma de preservação das garantias constitucionais e da integridade do devido processo legal.",
+      "VIDE: HC 915473 – DF (STJ), MIN. REL. OTAVIO DE ALMEIDA TOLEDO (DESEMBARGADOR CONVOCADO DO TJSP)",
     ],
   },
 ];
