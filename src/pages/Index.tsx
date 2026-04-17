@@ -13,8 +13,6 @@ import ContactSection from "@/components/ContactSection";
 import AreasSection from "@/components/AreasSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-import StatsBar from "@/components/StatsBar";
-
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
@@ -102,9 +100,6 @@ const Index = () => {
           </motion.div>
         </motion.div>
       </section>
-
-      {/* ═══ STATS BAR ═══ */}
-      <StatsBar />
 
       {/* ═══ ÁREAS ═══ */}
       <AreasSection />
