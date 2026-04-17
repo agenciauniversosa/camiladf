@@ -28,24 +28,6 @@ export const categories = [
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "3",
-    title: "Prisão Preventiva: Limites e Garantias Constitucionais",
-    excerpt: "Uma análise sobre os requisitos legais para a decretação da prisão preventiva e os direitos do preso provisório.",
-    category: "Direito Penal",
-    date: "25 Fev 2026",
-    readTime: "8 min",
-    slug: "prisao-preventiva-garantias",
-    image: blog3,
-    content: [
-      "A prisão preventiva é a medida cautelar mais severa do processo penal brasileiro. Prevista nos artigos 311 a 316 do Código de Processo Penal, ela só pode ser decretada quando presentes os requisitos legais e se nenhuma medida cautelar alternativa for suficiente.",
-      "Para a decretação da preventiva, o juiz deve demonstrar a existência de prova da materialidade do crime e indícios suficientes de autoria, além de pelo menos um dos fundamentos: garantia da ordem pública, garantia da ordem econômica, conveniência da instrução criminal ou asseguramento da aplicação da lei penal.",
-      "O Pacote Anticrime (Lei nº 13.964/2019) trouxe importantes alterações. Agora, o juiz não pode mais decretar a prisão preventiva de ofício, sendo necessário o requerimento do Ministério Público, do querelante ou do assistente, ou a representação da autoridade policial. Além disso, a cada 90 dias, o juiz deve revisar a necessidade da manutenção da prisão.",
-      "A audiência de custódia, obrigatória em até 24 horas após a prisão em flagrante, é um momento crucial para a defesa. Nela, o juiz avalia a legalidade da prisão e decide sobre a conversão em preventiva, a concessão de liberdade provisória ou a imposição de medidas cautelares diversas.",
-      "O habeas corpus é o instrumento constitucional por excelência para combater prisões ilegais ou abusivas. Pode ser impetrado a qualquer tempo e não exige formalidades rígidas, podendo inclusive ser concedido de ofício pelo tribunal.",
-      "A atuação de um advogado criminalista experiente é essencial desde o primeiro momento da prisão, garantindo que todos os direitos do acusado sejam respeitados e que a defesa técnica seja exercida com a máxima eficiência.",
-    ],
-  },
-  {
     id: "4",
     title: "Indenização por Erro Médico: Como Buscar Reparação",
     excerpt: "Entenda quando o erro médico gera direito à indenização e quais provas são necessárias para obter a reparação judicial.",
