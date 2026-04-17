@@ -28,24 +28,6 @@ export const categories = [
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "2",
-    title: "Dano Moral por Negativação Indevida: Seus Direitos",
-    excerpt: "Saiba como agir quando seu nome é incluído indevidamente em cadastros de inadimplentes e qual indenização pode ser obtida.",
-    category: "Indenização Civil",
-    date: "2 Mar 2026",
-    readTime: "6 min",
-    slug: "dano-moral-negativacao-indevida",
-    image: blog2,
-    content: [
-      "A inclusão indevida do nome de consumidores em cadastros de restrição ao crédito, como SPC e Serasa, é uma das causas mais frequentes de ações de indenização por danos morais no Brasil. A jurisprudência consolidada reconhece que essa situação gera dano moral presumido, ou seja, não é necessário comprovar o sofrimento — basta demonstrar a negativação indevida.",
-      "O primeiro passo ao descobrir uma negativação indevida é reunir as provas necessárias: extratos bancários que comprovem a inexistência da dívida, prints do cadastro de inadimplentes e qualquer comunicação recebida sobre a cobrança. Essa documentação será essencial para o processo judicial.",
-      "O valor das indenizações por negativação indevida varia conforme o caso. Os tribunais consideram fatores como o tempo de permanência da restrição, a existência de outras negativações legítimas, a conduta do réu e o impacto na vida do autor. Valores entre R$ 5 mil e R$ 20 mil são os mais comuns, podendo ser superiores em situações excepcionais.",
-      "É importante observar a Súmula 385 do STJ, que estabelece que a pessoa que já possui inscrição legítima em cadastro de inadimplentes não faz jus a indenização por dano moral decorrente de nova inscrição, ainda que indevida. Essa limitação deve ser verificada antes do ajuizamento da ação.",
-      "Além do dano moral, é possível pleitear danos materiais quando a negativação indevida gerou prejuízos concretos, como a perda de um financiamento ou a impossibilidade de realizar uma compra a prazo. A comprovação documental desses prejuízos é indispensável.",
-      "Recomendamos agir rapidamente, pois o prazo prescricional para ações de indenização por dano moral é de 3 anos, contados a partir do conhecimento da negativação.",
-    ],
-  },
-  {
     id: "3",
     title: "Prisão Preventiva: Limites e Garantias Constitucionais",
     excerpt: "Uma análise sobre os requisitos legais para a decretação da prisão preventiva e os direitos do preso provisório.",
