@@ -82,6 +82,33 @@ include 'includes/navbar.php';
           <p class="body-sm" style="color:hsl(var(--muted-foreground));">Busca de reparação justa por danos morais e materiais, com análise individualizada de cada caso.</p>
           <div class="area-line"></div>
         </div>
+
+        <div class="area-card reveal" data-delay="0.2">
+          <div class="area-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>
+          </div>
+          <h3>Lei de Drogas</h3>
+          <p class="body-sm" style="color:hsl(var(--muted-foreground));">Atuação estratégica e técnica em processos envolvendo a Lei de Drogas, com foco na análise rigorosa da legalidade das provas, combate a abordagens ilícitas e garantia dos direitos fundamentais do acusado. Defesa qualificada em todas as fases do processo, com especial atenção à dosimetria da pena e à aplicação de benefícios legais, como o tráfico privilegiado.</p>
+          <div class="area-line"></div>
+        </div>
+
+        <div class="area-card reveal" data-delay="0.3">
+          <div class="area-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          </div>
+          <h3>Grandes Operações</h3>
+          <p class="body-sm" style="color:hsl(var(--muted-foreground));">Atuação em investigações e processos oriundos de grandes operações policiais, com abordagem altamente técnica e estratégica. Experiência na análise de provas complexas, medidas cautelares, colaborações premiadas e nulidades processuais, sempre com foco na proteção das garantias constitucionais e na construção de uma defesa sólida e personalizada.</p>
+          <div class="area-line"></div>
+        </div>
+
+        <div class="area-card reveal" data-delay="0.4">
+          <div class="area-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2.96a1 1 0 0 1 1.8.84A19 19 0 0 1 11 20Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+          </div>
+          <h3>Crimes Ambientais</h3>
+          <p class="body-sm" style="color:hsl(var(--muted-foreground));">Assessoria e defesa em processos relacionados a crimes ambientais, com atuação tanto preventiva quanto contenciosa. Análise detalhada de autos de infração, defesa administrativa e judicial, sempre com foco na proteção dos direitos do cliente e na regularização ambiental.</p>
+          <div class="area-line"></div>
+        </div>
       </div>
     </div>
   </section>
