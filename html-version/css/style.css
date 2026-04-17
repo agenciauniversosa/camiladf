@@ -995,3 +995,38 @@ textarea.contact-input { resize: none; min-height: 130px; }
   height: 40vw;
   background: hsl(var(--primary) / 0.03);
 }
+
+/* ═══ WHATSAPP FLOAT ═══ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  box-shadow: 0 10px 30px -5px hsl(var(--accent) / 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px -5px hsl(var(--accent) / 0.7);
+}
+.whatsapp-float svg { position: relative; z-index: 1; }
+.whatsapp-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: hsl(var(--accent));
+  opacity: 0.2;
+  animation: whatsapp-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes whatsapp-ping {
+  0% { transform: scale(1); opacity: 0.35; }
+  75%, 100% { transform: scale(1.6); opacity: 0; }
+}
