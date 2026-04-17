@@ -28,24 +28,6 @@ export const categories = [
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "1",
-    title: "Legítima Defesa: Quando o Direito Penal Protege Quem Se Defende",
-    excerpt: "Entenda os requisitos legais da legítima defesa no Código Penal brasileiro e como essa excludente de ilicitude é aplicada pelos tribunais.",
-    category: "Direito Penal",
-    date: "8 Mar 2026",
-    readTime: "7 min",
-    slug: "legitima-defesa-direito-penal",
-    image: blog1,
-    content: [
-      "A legítima defesa é uma das excludentes de ilicitude mais invocadas no Direito Penal brasileiro. Prevista no artigo 25 do Código Penal, ela permite que uma pessoa repila agressão injusta, atual ou iminente, utilizando os meios necessários e de forma moderada.",
-      "Para que a legítima defesa seja reconhecida, é preciso que estejam presentes todos os seus requisitos: a agressão deve ser injusta (contrária ao direito), atual ou iminente, e a reação deve ser proporcional ao ataque sofrido. O excesso — seja doloso ou culposo — pode levar à responsabilização penal do agente.",
-      "A jurisprudência dos tribunais superiores tem refinado a análise desses requisitos ao longo dos anos. O STJ já decidiu, por exemplo, que a agressão verbal, por si só, não autoriza a reação física em legítima defesa, exigindo-se uma ameaça concreta à integridade física ou à vida.",
-      "Outro ponto relevante é a legítima defesa putativa, situação em que o agente acredita estar sendo agredido, mas na verdade não há agressão real. Nesses casos, o erro pode afastar o dolo, mas não necessariamente a responsabilidade penal se houver culpa na avaliação equivocada da situação.",
-      "A defesa técnica em casos que envolvem legítima defesa exige uma reconstrução detalhada dos fatos, com análise pericial, oitiva de testemunhas e demonstração da proporcionalidade da reação. A atuação de um advogado especializado é fundamental para garantir que o direito do acusado seja plenamente exercido.",
-      "Recomendamos que qualquer pessoa envolvida em situação de legítima defesa procure orientação jurídica imediatamente, preservando provas e registrando ocorrência policial o mais rápido possível.",
-    ],
-  },
-  {
     id: "2",
     title: "Dano Moral por Negativação Indevida: Seus Direitos",
     excerpt: "Saiba como agir quando seu nome é incluído indevidamente em cadastros de inadimplentes e qual indenização pode ser obtida.",
