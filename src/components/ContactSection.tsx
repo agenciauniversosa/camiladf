@@ -93,10 +93,8 @@ const ContactSection = () => {
                 </p>
               </div>
               <div className="space-y-2 body-sm text-primary-foreground/40">
-                
-                
                 <p className="mt-3">camila@diasfrazao.com.br</p>
-                
+                <p>(61) 98159-0908</p>
               </div>
             </div>
           </Reveal>
