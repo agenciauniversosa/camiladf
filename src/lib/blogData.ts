@@ -4,6 +4,7 @@ import blog3 from "@/assets/blog/blog-3.jpg";
 import blog4 from "@/assets/blog/blog-4.jpg";
 import blog5 from "@/assets/blog/blog-5.jpg";
 import blog6 from "@/assets/blog/blog-6.jpg";
+import blog7 from "@/assets/blog/blog-7.jpg";
 
 export interface BlogPost {
   id: string;
@@ -133,6 +134,42 @@ export const blogPosts: BlogPost[] = [
       "Esse entendimento amplia as possibilidades de atuação da defesa, permitindo o uso simultâneo de recursos e habeas corpus, bem como a superação de decisões restritivas quando demonstrada ilegalidade manifesta.",
       "A evolução jurisprudencial reafirma o habeas corpus como instrumento central de proteção da liberdade, evidenciando que a técnica processual não pode se sobrepor aos direitos fundamentais.",
       "Vide: HC 268.729/DF – MIN. REL. CRISTIANO ZANIN (STF)",
+    ],
+  },
+  {
+    id: "7",
+    title: "Superação da Súmula 691 do STF e prisão domiciliar para mães e gestantes",
+    excerpt: "Análise da decisão no HC 939358/DF, do STJ, e seus reflexos práticos na defesa criminal envolvendo mulheres gestantes e mães de crianças menores de 12 anos.",
+    category: "Direito Penal",
+    date: "15 Abr 2026",
+    readTime: "10 min",
+    slug: "sumula-691-prisao-domiciliar-maes-gestantes",
+    image: blog7,
+    content: [
+      "A decisão proferida no Habeas Corpus n. 939358/DF, relatado pelo Ministro Otávio de Almeida Toledo (Desembargador convocado do TJSP), oferece um precedente relevante em dois planos: processual e material. No plano processual, o Superior Tribunal de Justiça afastou, em caráter excepcional, o óbice da Súmula 691 do STF. No plano material, reconheceu o cabimento da substituição da prisão preventiva por prisão domiciliar em favor de mulher gestante e mãe de crianças menores de 12 anos, à luz do art. 318-A do CPP e do HC coletivo 143.641/SP do Supremo Tribunal Federal.",
+      "1. O que diz a Súmula 691 e por que ela costuma impedir o conhecimento do habeas corpus",
+      "A Súmula 691 do STF consolidou o entendimento de que, em regra, não cabe habeas corpus contra decisão monocrática de relator que indefere liminar em outro habeas corpus impetrado perante tribunal superior ou tribunal de origem. A razão é evitar supressão de instância e o uso sucessivo do remédio heroico como atalho recursal.",
+      "Na prática forense, isso significa que, quando o relator no tribunal local indefere a liminar, a impetração imediata de novo habeas corpus perante o STJ ou o STF tende a não ser conhecida. Todavia, a própria jurisprudência das Cortes Superiores admite relativização desse enunciado quando a decisão atacada revelar ilegalidade manifesta, abuso de poder, teratologia ou flagrante falta de razoabilidade.",
+      "2. A superação do óbice sumular no caso concreto",
+      "Foi exatamente esse o caminho adotado no HC 939358/DF. Embora o writ tenha sido impetrado contra decisão que negara liminar no tribunal de origem, o STJ entendeu haver ilegalidade manifesta apta a justificar a superação da Súmula 691.",
+      "O ponto central foi o descompasso entre a situação concreta da paciente e o regime jurídico protetivo dirigido às mulheres gestantes e mães de crianças pequenas. A paciente estava grávida e era mãe de duas crianças menores, e o delito imputado não envolvia violência ou grave ameaça, nem fora praticado contra descendente. Diante disso, estavam presentes, em tese, os requisitos normativos do art. 318-A do CPP.",
+      "Assim, o STJ concluiu que a manutenção da prisão preventiva, sem adequada observância do marco legal e jurisprudencial de proteção à maternidade e à infância, configurava constrangimento ilegal bastante para autorizar o afastamento do óbice sumular.",
+      "3. Prisão domiciliar para mães e gestantes: o regime jurídico aplicável",
+      "A Lei 13.769/2018 reforçou a tutela processual da maternidade ao inserir o art. 318-A no Código de Processo Penal. O dispositivo determina a substituição da prisão preventiva por prisão domiciliar à mulher gestante ou que for mãe ou responsável por crianças ou pessoas com deficiência, desde que não tenha cometido crime com violência ou grave ameaça à pessoa e desde que o delito não tenha sido praticado contra seu filho ou dependente.",
+      "Esse comando legal dialoga diretamente com o que foi decidido pelo STF no HC coletivo 143.641/SP, em que se assentou a necessidade de priorizar a proteção integral da criança e do adolescente, admitindo a substituição da prisão preventiva pela domiciliar para gestantes, puérperas e mães de crianças de até 12 anos, salvo hipóteses verdadeiramente excepcionalíssimas, devidamente fundamentadas.",
+      "A decisão do STJ, portanto, reafirma que o exame judicial não pode se limitar à gravidade abstrata do tráfico de drogas, nem pode transformar em regra a negativa de domiciliar para mulheres mães ou gestantes. A excepcionalidade deve ser concreta, individualizada e seriamente demonstrada.",
+      "4. Os fundamentos afastados pelo STJ",
+      "Na origem, a prisão domiciliar havia sido recusada sob fundamentos como a existência de rede de apoio familiar, a apreensão de droga no interior da residência e a ausência de comprovação de gravidez de risco. O STJ, contudo, reposicionou a análise a partir da lógica protetiva do art. 318-A do CPP e da jurisprudência do Supremo.",
+      "Primeiro, porque a indispensabilidade dos cuidados maternos para filhos menores de 12 anos é presumida pela jurisprudência da Corte Superior. Não se exige da defesa prova impossível ou excessiva de que ninguém mais no ambiente familiar poderia cuidar da criança. O foco não é apenas a situação da mãe, mas, sobretudo, o melhor interesse da criança.",
+      "Segundo, porque o simples fato de a droga ter sido apreendida na residência não basta, por si só, para afastar o benefício. Segundo a compreensão reafirmada na decisão, a residência comum não autoriza concluir automaticamente que o crime foi praticado contra os filhos, nem que a hipótese se enquadra como situação excepcionalíssima.",
+      "Terceiro, porque a ausência de gravidez de risco não elimina, por si, a incidência do art. 318-A. A domiciliar, nesse contexto, não depende de prova de gestação de alto risco, já que a proteção legal é mais ampla e alcança a própria condição de gestante e de mãe.",
+      "5. A mensagem prática da decisão para a advocacia criminal",
+      "A decisão é particularmente importante para a advocacia criminal porque demonstra que a Súmula 691 não é um bloqueio absoluto. Quando a decisão impugnada desconsidera frontalmente parâmetros legais e precedentes vinculantes de proteção à maternidade e à infância, há espaço para sustentar, com técnica, a superação do verbete.",
+      "Além disso, o precedente reforça algumas teses defensivas relevantes: (i) o tráfico de drogas, sem violência ou grave ameaça, não impede automaticamente a domiciliar; (ii) a maternidade de criança menor de 12 anos atrai presunção favorável quanto à necessidade dos cuidados maternos; (iii) o argumento da rede de apoio familiar não basta, isoladamente, para afastar a proteção legal; e (iv) a excepcionalidade apta a negar o benefício deve ser concreta, robusta e especificamente fundamentada.",
+      "6. Conclusão",
+      "O HC 939358/DF é um precedente valioso porque evidencia que o processo penal não pode ser interpretado de forma indiferente à proteção da infância, à maternidade e à dignidade da pessoa presa. Ao superar a Súmula 691 e conceder prisão domiciliar à paciente gestante e mãe de duas crianças, o STJ reafirmou que a legalidade da prisão cautelar deve ser controlada com rigor, especialmente quando a permanência no cárcere contraria norma legal expressa e orientação consolidada do Supremo Tribunal Federal.",
+      "Para além do caso concreto, a decisão serve de alerta: onde houver motivação padronizada, presunções desfavoráveis automáticas ou resistência indevida à aplicação do art. 318-A do CPP, caberá à defesa demonstrar que não se trata de mera divergência interpretativa, mas de efetivo constrangimento ilegal, apto a justificar a atuação corretiva dos tribunais superiores.",
+      "VIDE: Superior Tribunal de Justiça. HC 939358/DF, Rel. Ministro Otávio de Almeida Toledo (Desembargador convocado do TJSP)",
     ],
   },
 ];
