@@ -164,45 +164,45 @@ include 'includes/navbar.php';
         </div>
       </div>
 
-      <!-- Featured post -->
-      <a href="blog-post.php?slug=legitima-defesa-direito-penal" class="blog-featured reveal">
+      <!-- Featured post (mais recente) -->
+      <a href="blog-post.php?slug=ilegalidade-busca-domiciliar-hc-960442" class="blog-featured reveal">
         <div class="featured-image">
-          <img src="images/blog/blog-1.jpg" alt="Legítima Defesa">
+          <img src="images/blog/blog-10.jpg" alt="Ilegalidade da busca domiciliar">
         </div>
         <div class="featured-content">
           <p class="label-sm">Direito Penal</p>
-          <h3 class="heading-lg">Legítima Defesa: Quando o Direito Penal Protege Quem Se Defende</h3>
-          <p class="body-md" style="color:hsl(var(--muted-foreground));margin-bottom:1.5rem;max-width:28rem;">Entenda os requisitos legais da legítima defesa no Código Penal brasileiro e como essa excludente de ilicitude é aplicada pelos tribunais.</p>
+          <h3 class="heading-lg">Ilegalidade da busca domiciliar: síntese técnica da decisão no HC 960442/DF</h3>
+          <p class="body-md" style="color:hsl(var(--muted-foreground));margin-bottom:1.5rem;max-width:28rem;">Fuga e resquícios de droga em via pública não autorizam, por si sós, o ingresso em residência sem mandado judicial ou consentimento livre comprovado.</p>
           <div class="featured-meta">
-            <span>8 Mar 2026</span> · <span>7 min</span>
+            <span>17 Abr 2026</span> · <span>9 min</span>
           </div>
         </div>
       </a>
 
-      <!-- Grid posts -->
+      <!-- Grid posts (3 mais recentes seguintes) -->
       <div class="blog-grid">
-        <a href="blog-post.php?slug=dano-moral-negativacao-indevida" class="blog-card reveal">
-          <div class="card-image"><img src="images/blog/blog-2.jpg" alt="Dano Moral"></div>
-          <p class="label-sm">Indenização Civil</p>
-          <h3>Dano Moral por Negativação Indevida: Seus Direitos</h3>
-          <p class="body-sm excerpt" style="color:hsl(var(--muted-foreground));">Saiba como agir quando seu nome é incluído indevidamente em cadastros de inadimplentes.</p>
-          <p class="card-meta">2 Mar 2026 · 6 min</p>
-        </a>
-
-        <a href="blog-post.php?slug=prisao-preventiva-garantias" class="blog-card reveal" data-delay="0.1">
-          <div class="card-image"><img src="images/blog/blog-3.jpg" alt="Prisão Preventiva"></div>
+        <a href="blog-post.php?slug=justa-causa-trancamento-acao-penal-provas-ilicitas" class="blog-card reveal">
+          <div class="card-image"><img src="images/blog/blog-9.jpg" alt="Justa causa e provas ilícitas"></div>
           <p class="label-sm">Direito Penal</p>
-          <h3>Prisão Preventiva: Limites e Garantias Constitucionais</h3>
-          <p class="body-sm excerpt" style="color:hsl(var(--muted-foreground));">Uma análise sobre os requisitos legais para a decretação da prisão preventiva.</p>
-          <p class="card-meta">25 Fev 2026 · 8 min</p>
+          <h3>Justa causa da ação penal e trancamento por provas ilícitas</h3>
+          <p class="body-sm excerpt" style="color:hsl(var(--muted-foreground));">Como a ilicitude probatória compromete a justa causa e autoriza o trancamento da ação penal pela via do habeas corpus.</p>
+          <p class="card-meta">17 Abr 2026 · 8 min</p>
         </a>
 
-        <a href="blog-post.php?slug=indenizacao-erro-medico" class="blog-card reveal" data-delay="0.2">
-          <div class="card-image"><img src="images/blog/blog-4.jpg" alt="Erro Médico"></div>
-          <p class="label-sm">Indenização Civil</p>
-          <h3>Indenização por Erro Médico: Como Buscar Reparação</h3>
-          <p class="body-sm excerpt" style="color:hsl(var(--muted-foreground));">Entenda quando o erro médico gera direito à indenização e quais provas são necessárias.</p>
-          <p class="card-meta">18 Fev 2026 · 7 min</p>
+        <a href="blog-post.php?slug=prisao-preventiva-regime-semiaberto-antecipacao-pena" class="blog-card reveal" data-delay="0.1">
+          <div class="card-image"><img src="images/blog/blog-8.jpg" alt="Prisão preventiva e regime semiaberto"></div>
+          <p class="label-sm">Direito Penal</p>
+          <h3>Da incompatibilidade entre a prisão preventiva e o regime inicial semiaberto</h3>
+          <p class="body-sm excerpt" style="color:hsl(var(--muted-foreground));">Por que manter a prisão cautelar quando a sentença fixa regime semiaberto configura constrangimento ilegal.</p>
+          <p class="card-meta">17 Abr 2026 · 6 min</p>
+        </a>
+
+        <a href="blog-post.php?slug=sumula-691-prisao-domiciliar-maes-gestantes" class="blog-card reveal" data-delay="0.2">
+          <div class="card-image"><img src="images/blog/blog-7.jpg" alt="Súmula 691 e prisão domiciliar"></div>
+          <p class="label-sm">Direito Penal</p>
+          <h3>Superação da Súmula 691 do STF e prisão domiciliar para mães e gestantes</h3>
+          <p class="body-sm excerpt" style="color:hsl(var(--muted-foreground));">Análise da decisão no HC 939358/DF, do STJ, e seus reflexos práticos na defesa criminal.</p>
+          <p class="card-meta">15 Abr 2026 · 10 min</p>
         </a>
       </div>
 

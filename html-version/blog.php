@@ -4,16 +4,16 @@ $pageDescription = 'Artigos e publicações sobre Direito Penal e Indenização 
 include 'includes/header.php';
 include 'includes/navbar.php';
 
+// Ordenados do mais recente para o mais antigo
 $posts = [
-  ['slug' => 'legitima-defesa-direito-penal', 'title' => 'Legítima Defesa: Quando o Direito Penal Protege Quem Se Defende', 'excerpt' => 'Entenda os requisitos legais da legítima defesa no Código Penal brasileiro e como essa excludente de ilicitude é aplicada pelos tribunais.', 'category' => 'Direito Penal', 'date' => '8 Mar 2026', 'readTime' => '7 min', 'image' => 'images/blog/blog-1.jpg'],
-  ['slug' => 'dano-moral-negativacao-indevida', 'title' => 'Dano Moral por Negativação Indevida: Seus Direitos', 'excerpt' => 'Saiba como agir quando seu nome é incluído indevidamente em cadastros de inadimplentes e qual indenização pode ser obtida.', 'category' => 'Indenização Civil', 'date' => '2 Mar 2026', 'readTime' => '6 min', 'image' => 'images/blog/blog-2.jpg'],
-  ['slug' => 'prisao-preventiva-garantias', 'title' => 'Prisão Preventiva: Limites e Garantias Constitucionais', 'excerpt' => 'Uma análise sobre os requisitos legais para a decretação da prisão preventiva e os direitos do preso provisório.', 'category' => 'Direito Penal', 'date' => '25 Fev 2026', 'readTime' => '8 min', 'image' => 'images/blog/blog-3.jpg'],
-  ['slug' => 'indenizacao-erro-medico', 'title' => 'Indenização por Erro Médico: Como Buscar Reparação', 'excerpt' => 'Entenda quando o erro médico gera direito à indenização e quais provas são necessárias para obter a reparação judicial.', 'category' => 'Indenização Civil', 'date' => '18 Fev 2026', 'readTime' => '7 min', 'image' => 'images/blog/blog-4.jpg'],
-  ['slug' => 'tribunal-do-juri-defesa', 'title' => 'Tribunal do Júri: Como Funciona a Defesa Criminal', 'excerpt' => 'Conheça o funcionamento do Tribunal do Júri no Brasil e as estratégias de defesa nos crimes dolosos contra a vida.', 'category' => 'Direito Penal', 'date' => '10 Fev 2026', 'readTime' => '9 min', 'image' => 'images/blog/blog-5.jpg'],
-  ['slug' => 'acidente-transito-indenizacao', 'title' => 'Acidente de Trânsito: Direito à Indenização Completa', 'excerpt' => 'Saiba quais reparações a vítima de acidente de trânsito pode exigir e como garantir uma indenização justa.', 'category' => 'Indenização Civil', 'date' => '3 Fev 2026', 'readTime' => '6 min', 'image' => 'images/blog/blog-6.jpg'],
+  ['slug' => 'ilegalidade-busca-domiciliar-hc-960442', 'title' => 'Ilegalidade da busca domiciliar: síntese técnica da decisão no HC 960442/DF', 'excerpt' => 'Fuga e resquícios de droga em via pública não autorizam, por si sós, o ingresso em residência sem mandado judicial ou consentimento livre comprovado.', 'category' => 'Direito Penal', 'date' => '17 Abr 2026', 'readTime' => '9 min', 'image' => 'images/blog/blog-10.jpg'],
+  ['slug' => 'justa-causa-trancamento-acao-penal-provas-ilicitas', 'title' => 'Justa causa da ação penal e trancamento por provas ilícitas', 'excerpt' => 'Como a ilicitude probatória compromete a justa causa e autoriza o trancamento da ação penal pela via do habeas corpus.', 'category' => 'Direito Penal', 'date' => '17 Abr 2026', 'readTime' => '8 min', 'image' => 'images/blog/blog-9.jpg'],
+  ['slug' => 'prisao-preventiva-regime-semiaberto-antecipacao-pena', 'title' => 'Da incompatibilidade entre a prisão preventiva e o regime inicial semiaberto: verdadeira antecipação de pena', 'excerpt' => 'Por que manter a prisão cautelar quando a sentença fixa regime semiaberto configura constrangimento ilegal e execução antecipada da pena.', 'category' => 'Direito Penal', 'date' => '17 Abr 2026', 'readTime' => '6 min', 'image' => 'images/blog/blog-8.jpg'],
+  ['slug' => 'sumula-691-prisao-domiciliar-maes-gestantes', 'title' => 'Superação da Súmula 691 do STF e prisão domiciliar para mães e gestantes', 'excerpt' => 'Análise da decisão no HC 939358/DF, do STJ, e seus reflexos práticos na defesa criminal envolvendo mulheres gestantes e mães de crianças menores de 12 anos.', 'category' => 'Direito Penal', 'date' => '15 Abr 2026', 'readTime' => '10 min', 'image' => 'images/blog/blog-7.jpg'],
+  ['slug' => 'superacao-sumula-691-stf-habeas-corpus', 'title' => 'A superação da Súmula 691 do STF e a admissibilidade do habeas corpus concomitante ao recurso especial', 'excerpt' => 'Análise da flexibilização de óbices processuais pelo STF em matéria penal e o uso simultâneo do habeas corpus com recursos excepcionais.', 'category' => 'Direito Penal', 'date' => '3 Fev 2026', 'readTime' => '8 min', 'image' => 'images/blog/blog-6.jpg'],
 ];
 
-$categories = ['Direito Penal', 'Indenização Civil'];
+$categories = ['Direito Penal'];
 ?>
 
   <div style="padding-top:7rem;padding-bottom:6rem;">
