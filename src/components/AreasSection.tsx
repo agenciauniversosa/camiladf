@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Gavel } from "lucide-react";
+import { Scale, Gavel, Pill, ShieldAlert, Leaf } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const areas = [
@@ -12,6 +12,21 @@ const areas = [
     title: "Indenização Civil",
     desc: "Busca de reparação justa por danos morais e materiais, com análise individualizada de cada caso.",
     icon: Scale,
+  },
+  {
+    title: "Lei de Drogas",
+    desc: "Atuação estratégica e técnica em processos envolvendo a Lei de Drogas, com foco na análise rigorosa da legalidade das provas, combate a abordagens ilícitas e garantia dos direitos fundamentais do acusado. Defesa qualificada em todas as fases do processo, com especial atenção à dosimetria da pena e à aplicação de benefícios legais, como o tráfico privilegiado.",
+    icon: Pill,
+  },
+  {
+    title: "Grandes Operações",
+    desc: "Atuação em investigações e processos oriundos de grandes operações policiais, com abordagem altamente técnica e estratégica. Experiência na análise de provas complexas, medidas cautelares, colaborações premiadas e nulidades processuais, sempre com foco na proteção das garantias constitucionais e na construção de uma defesa sólida e personalizada.",
+    icon: ShieldAlert,
+  },
+  {
+    title: "Crimes Ambientais",
+    desc: "Assessoria e defesa em processos relacionados a crimes ambientais, com atuação tanto preventiva quanto contenciosa. Análise detalhada de autos de infração, defesa administrativa e judicial, sempre com foco na proteção dos direitos do cliente e na regularização ambiental.",
+    icon: Leaf,
   },
 ];
 
