@@ -102,7 +102,7 @@ include 'includes/navbar.php';
             </div>
             <div class="about-badge">
               <p class="name">Camila C. Dias Frazão</p>
-              <p class="title">Fundadora · OAB/SP</p>
+              <p class="title">OAB/DF 71.545</p>
             </div>
           </div>
         </div>
@@ -205,7 +205,6 @@ include 'includes/navbar.php';
           </div>
           <div class="contact-details body-sm">
             <p class="email-line">camila@diasfrazao.com.br</p>
-            <p>(61) 98159-0908</p>
           </div>
         </div>
 
