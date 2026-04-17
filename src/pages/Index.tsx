@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import ContactSection from "@/components/ContactSection";
 import AreasSection from "@/components/AreasSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 import StatsBar from "@/components/StatsBar";
 
@@ -195,6 +196,7 @@ const Index = () => {
       <ContactSection />
 
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
