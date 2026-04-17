@@ -28,24 +28,6 @@ export const categories = [
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "5",
-    title: "Tribunal do Júri: Como Funciona a Defesa Criminal",
-    excerpt: "Conheça o funcionamento do Tribunal do Júri no Brasil e as estratégias de defesa nos crimes dolosos contra a vida.",
-    category: "Direito Penal",
-    date: "10 Fev 2026",
-    readTime: "9 min",
-    slug: "tribunal-do-juri-defesa",
-    image: blog5,
-    content: [
-      "O Tribunal do Júri é a instituição constitucional responsável por julgar os crimes dolosos contra a vida: homicídio, infanticídio, induzimento ao suicídio e aborto. Previsto no artigo 5º, inciso XXXVIII, da Constituição Federal, o Júri possui garantias fundamentais: plenitude de defesa, sigilo das votações, soberania dos veredictos e competência para o julgamento dos crimes dolosos contra a vida.",
-      "O procedimento do Júri é bifásico. Na primeira fase (judicium accusationis), o juiz avalia se há provas suficientes para submeter o acusado a julgamento popular. Se entender que sim, profere a decisão de pronúncia. Caso contrário, pode impronunciar, absolver sumariamente ou desclassificar o crime.",
-      "A segunda fase (judicium causae) é o plenário do Júri propriamente dito. Nela, sete jurados, escolhidos entre cidadãos comuns, decidem sobre a culpa do acusado. A votação é sigilosa, e a decisão é tomada por maioria simples (4 a 3).",
-      "A estratégia de defesa no Júri exige habilidades específicas do advogado. Diferentemente do processo comum, onde a argumentação é predominantemente técnica, no plenário é preciso comunicar-se com jurados leigos, utilizando linguagem acessível e argumentação persuasiva. A oratória, a capacidade de contar uma narrativa convincente e a empatia são habilidades essenciais.",
-      "Entre as teses defensivas mais comuns estão a negativa de autoria, a legítima defesa, a desclassificação para crime culposo e a participação de menor importância. A escolha da tese deve considerar as provas disponíveis e o perfil dos jurados.",
-      "Um advogado criminalista experiente em Tribunal do Júri pode fazer a diferença entre a condenação e a absolvição. A preparação meticulosa, o conhecimento profundo dos autos e a capacidade de reagir aos argumentos da acusação são diferenciais que não podem ser improvisados.",
-    ],
-  },
-  {
     id: "6",
     title: "A superação da Súmula 691 do STF e a admissibilidade do habeas corpus concomitante ao recurso especial",
     excerpt: "Análise da flexibilização de óbices processuais pelo STF em matéria penal e o uso simultâneo do habeas corpus com recursos excepcionais.",
