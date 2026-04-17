@@ -7,6 +7,7 @@ import blog6 from "@/assets/blog/blog-6.jpg";
 import blog7 from "@/assets/blog/blog-7.jpg";
 import blog8 from "@/assets/blog/blog-8.jpg";
 import blog9 from "@/assets/blog/blog-9.jpg";
+import blog10 from "@/assets/blog/blog-10.jpg";
 
 export interface BlogPost {
   id: string;
@@ -216,6 +217,39 @@ export const blogPosts: BlogPost[] = [
       "Do ponto de vista estratégico, a defesa deve demonstrar não apenas a ilicitude da prova, mas também a inexistência de fontes independentes e autônomas que possam sustentar a acusação. A ausência desse suporte implica o reconhecimento da falta de justa causa.",
       "Em síntese, não há ação penal legítima sem justa causa, e não há justa causa quando a acusação se fundamenta em provas ilícitas. Nesses casos, o ordenamento jurídico impõe o trancamento da ação penal como forma de preservação das garantias constitucionais e da integridade do devido processo legal.",
       "VIDE: HC 915473 – DF (STJ), MIN. REL. OTAVIO DE ALMEIDA TOLEDO (DESEMBARGADOR CONVOCADO DO TJSP)",
+    ],
+  },
+  {
+    id: "10",
+    title: "Ilegalidade da busca domiciliar: síntese técnica da decisão no HC 960442/DF",
+    excerpt: "Fuga e resquícios de droga em via pública não autorizam, por si sós, o ingresso em residência sem mandado judicial ou consentimento livre comprovado.",
+    category: "Direito Penal",
+    date: "17 Abr 2026",
+    readTime: "9 min",
+    slug: "ilegalidade-busca-domiciliar-hc-960442",
+    image: blog10,
+    content: [
+      "Material redigido a partir da decisão do Ministro Rogerio Schietti Cruz, com foco na nulidade do ingresso domiciliar sem mandado judicial.",
+      "Tese central: a fuga e os resquícios de droga encontrados na via pública podem legitimar a busca pessoal, mas não autorizam, por si sós, o ingresso em residência. Sem consentimento livre e comprovado, ou sem fundadas razões prévias e concretas de flagrante no interior do imóvel, a busca domiciliar é ilícita.",
+      "1. Síntese da decisão",
+      "No habeas corpus, a defesa sustentou a ilicitude das provas decorrentes do ingresso em domicílio. O STJ reconheceu que, no caso concreto, a abordagem pessoal do paciente foi considerada válida, porque houve perseguição após fuga e, posteriormente, localização de resquícios de droga e dinheiro. Contudo, a Corte afastou a legalidade das diligências realizadas nas residências indicadas no curso da ocorrência, por entender ausentes elementos idôneos para demonstrar consentimento voluntário ou justa causa autônoma para o ingresso policial.",
+      "2. Inviolabilidade do domicílio como garantia constitucional reforçada",
+      "A decisão parte do art. 5º, XI, da Constituição Federal e da tese firmada pelo STF no Tema 280, segundo a qual a entrada forçada em domicílio sem mandado judicial somente é lícita quando amparada em fundadas razões, anteriores ao ingresso e justificáveis posteriormente, de que no interior da casa ocorre situação de flagrante delito. O ponto central é que a descoberta posterior de drogas não convalida a invasão: a legalidade da diligência deve existir antes da entrada.",
+      "3. Busca pessoal não se confunde com busca domiciliar",
+      "Um dos pontos mais importantes do julgado é a distinção entre os standards probatórios. A busca pessoal, regida pelo art. 244 do CPP, admite fundada suspeita de posse de corpo de delito. Já a entrada em domicílio exige patamar mais elevado de justificação, porque a proteção constitucional da casa possui densidade normativa própria e tutela não apenas o investigado, mas todas as pessoas que se encontram no ambiente doméstico.",
+      "4. Por que a busca domiciliar foi considerada ilegal",
+      "No caso concreto, o STJ reputou inverossímil a narrativa policial segundo a qual o corréu, após abordagem em via pública e sem apreensão de ilícitos consigo, teria espontaneamente confessado possuir drogas, autorizado a entrada em sua residência e ainda indicado outros dois imóveis onde o entorpecente acabou localizado. Para a Corte, essa versão não demonstrou consentimento livre, esclarecido e desprovido de coação, especialmente diante do contexto de abordagem policial ostensiva, com agentes armados e investigado já constrangido pela situação.",
+      "5. Ônus do Estado de provar consentimento válido",
+      "A decisão aplica a orientação consolidada no HC 598.051/SP: o ônus de demonstrar a legalidade e a voluntariedade do consentimento é do Estado. Em caso de dúvida, não se presume autorização válida. Ao contrário, exige-se prova robusta, preferencialmente com registro por escrito, indicação de testemunhas e, sempre que possível, gravação em áudio e vídeo da diligência. A ausência desses elementos enfraquece decisivamente a versão estatal.",
+      "6. Apreensão em via pública não autoriza, automaticamente, busca na casa",
+      "Outro fundamento expressivo da decisão é que a mera apreensão de droga em via pública, ainda que associada a circunstâncias suspeitas, não permite presumir que haja mais objetos ilícitos dentro da residência. Para que o ingresso domiciliar fosse legítimo, seria necessário algum dado concreto de que o imóvel estava sendo utilizado, naquele momento, como base da traficância. Sem investigação prévia, monitoramento, campana ou sinais objetivos de mercancia no interior da casa, a diligência torna-se arbitrária.",
+      "7. Consequência processual da ilegalidade",
+      "Reconhecida a violação domiciliar, o STJ declarou ilícitas as provas obtidas nas residências e todas as derivadas delas, determinando o desentranhamento e a prolação de nova sentença com base apenas nas provas remanescentes. A ordem foi concedida parcialmente justamente porque a prova oriunda da busca pessoal foi preservada, mas todo o material apreendido nos imóveis foi contaminado pela ilicitude originária.",
+      "8. Tese utilizável em peça processual",
+      "A decisão oferece fundamento forte para sustentar que: (i) não basta invocar crime permanente para afastar a inviolabilidade do domicílio; (ii) fuga, nervosismo, denúncia genérica ou apreensão de pequena quantidade de droga fora da residência não equivalem a fundadas razões para ingresso no lar; (iii) consentimento domiciliar precisa ser comprovadamente livre, e não apenas afirmado pelos policiais; e (iv) a descoberta posterior de entorpecentes não sana a ilegalidade da entrada, impondo o reconhecimento da prova ilícita e de seus frutos.",
+      "9. Conclusão",
+      "Em termos práticos, a decisão reafirma que o combate ao tráfico não autoriza a flexibilização automática das garantias constitucionais. A casa continua sendo espaço de proteção qualificada. Sem lastro probatório prévio, concreto e controlável judicialmente, o ingresso policial converte-se em violação de domicílio, tornando ilícita a prova produzida. Em um Estado Democrático de Direito, eficiência persecutória não substitui legalidade constitucional.",
+      "VIDE: HC 960442/DF (STJ), Ministro Rogerio Schietti Cruz",
     ],
   },
 ];
