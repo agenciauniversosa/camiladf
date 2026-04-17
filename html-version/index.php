@@ -33,28 +33,6 @@ include 'includes/navbar.php';
     </div>
   </section>
 
-  <!-- ═══ STATS BAR ═══ -->
-  <section class="stats-bar">
-    <div class="section-container">
-      <div class="stats-card reveal">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-value counter" data-target="12" data-suffix="+">0</span>
-            <p class="stat-label">anos de atuação</p>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value counter" data-target="500" data-suffix="+">0</span>
-            <p class="stat-label">clientes atendidos</p>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value counter" data-target="98" data-suffix="%">0</span>
-            <p class="stat-label">de satisfação</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ ÁREAS ═══ -->
   <section id="areas" class="section-gap">
     <div class="section-container">
