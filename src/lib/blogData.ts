@@ -7,6 +7,7 @@ import blog6 from "@/assets/blog/blog-6.jpg";
 import blog7 from "@/assets/blog/blog-7.jpg";
 import blog8 from "@/assets/blog/blog-8.jpg";
 import blog9 from "@/assets/blog/blog-9.jpg";
+import blog10 from "@/assets/blog/blog-10.jpg";
 
 export interface BlogPost {
   id: string;
