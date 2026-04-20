@@ -22,4 +22,4 @@ jobs:
           password: ${{ secrets.PASS }}
           remoteDir: public_html/
           localDir: html-version/
-          forceSsl: true
+        
